@@ -3,7 +3,7 @@ import {
 } from '@testing-library/react';
 
 import {
-  Button, ThemeButton,
+  Button, ButtonTheme,
 } from './Button';
 
 describe('button', () => {
@@ -12,7 +12,7 @@ describe('button', () => {
     expect(screen.getByText('test')).toBeInTheDocument();
   });
   test('test clear theme', () => {
-    render(<Button theme={ThemeButton.CLEAR}>test</Button>);
+    render(<Button theme={ButtonTheme.CLEAR}>test</Button>);
     expect(screen.getByText('test')).toHaveClass('clear');
     screen.debug();
   });
