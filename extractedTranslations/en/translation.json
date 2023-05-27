@@ -1,6 +1,8 @@
 {
   "": "",
   "Unexpected error": "Unexpected error",
+  "decrement": "decrement",
+  "increment": "increment",
   "toggle": "toggle",
   "Войти": "Войти",
   "Главная": "Главная",
