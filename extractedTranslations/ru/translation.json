@@ -1,9 +1,11 @@
 {
-  "": "",
+  "Log In": "Войти",
   "Unexpected error": "Unexpected error",
   "decrement": "decrement",
   "increment": "increment",
   "toggle": "toggle",
+  "Введите username": "Введите username",
+  "Введите пароль": "Введите пароль",
   "Войти": "Войти",
   "Главная": "Главная",
   "Главная страница": "Главная страница",
