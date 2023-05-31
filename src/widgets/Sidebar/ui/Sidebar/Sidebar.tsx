@@ -53,7 +53,7 @@ export const Sidebar = ({ className }: SidebarProps) => {
           </span>
         </AppLink>
         <AppLink
-          theme={AppLinkTheme.RED}
+          theme={AppLinkTheme.SECONDARY}
           to={RoutePath.about}
           className={cls.item}
         >
