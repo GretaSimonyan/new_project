@@ -10,5 +10,7 @@
   "Обновить страницу": "Refresh page",
   "throw error": "Throw error",
   "Короткий язык": "En",
-  "Log In": "Log In"
+  "Log In": "Log In",
+  "You entered an incorrect username or password": "You entered an incorrect username or password",
+  "Authorisation form": "Auth form"
 }

@@ -1,6 +1,9 @@
 {
+  "Authorisation form": "Форма авторизации",
   "Log In": "Войти",
+  "Log Out": "Log Out",
   "Unexpected error": "Unexpected error",
+  "You entered an incorrect username or password": "You entered an incorrect username or password",
   "decrement": "decrement",
   "increment": "increment",
   "toggle": "toggle",
