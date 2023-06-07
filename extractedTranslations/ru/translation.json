@@ -1,10 +1,12 @@
 {
   "Authorisation form": "Форма авторизации",
+  "Enter Password": "Введите пароль",
+  "Enter username": "Введите username",
   "Log In": "Войти",
   "Log Out": "Log Out",
   "PROFILE PAGE": "Страница профиля",
   "Unexpected error": "Unexpected error",
-  "You entered an incorrect username or password": "You entered an incorrect username or password",
+  "You entered an incorrect username or password": "Вы ввели неверный логин или пароль",
   "decrement": "decrement",
   "increment": "increment",
   "toggle": "toggle",

@@ -3,7 +3,9 @@ import {
   createReduxStore, AppDispatch,
 } from './config/store';
 import type {
-  StateSchema, ReduxStoreWithManager,
+  StateSchema,
+  ReduxStoreWithManager,
+  ThunkConfig,
 } from './config/StateSchema';
 
 export {
@@ -11,4 +13,5 @@ export {
   createReduxStore,
   StateSchema,
   AppDispatch,
+  ThunkConfig,
 };
