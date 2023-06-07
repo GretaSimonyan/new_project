@@ -32,7 +32,9 @@ export interface LoginFormProps {
   onSuccess: () => void;
 }
 
-const initialReducers: ReducersList = { loginForm: loginReducer };
+const initialReducers: ReducersList = {
+  loginForm: loginReducer,
+};
 
 const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
   const { t } = useTranslation();
@@ -51,7 +53,9 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
   }, [dispatch]);
 
   const onLoginClick = useCallback(async () => {
-    const result = await dispatch(loginByUsername({ username, password }));
+    const result = await dispatch(loginByUsername({
+      username, password,
+    }));
     if (result.meta.requestStatus === 'fulfilled') {
       onSuccess();
     }

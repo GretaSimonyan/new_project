@@ -3,10 +3,16 @@ import { useTranslation } from 'react-i18next';
 import {
   DynamicModuleLoader, ReducersList,
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux'; // in storybook trows error if I want to use short import
 
-import { profileReducer } from '../../../entities/Profile'; // in storybook trows error if I want use short import
+import {
+  fetchProfileData, ProfileCard, profileReducer,
+} from '../../../entities/Profile';
 
-const reducers: ReducersList = { profile: profileReducer };
+const reducers: ReducersList = {
+  profile: profileReducer,
+};
 
 interface ProfilePageProps {
     className?: string;
@@ -14,11 +20,16 @@ interface ProfilePageProps {
 
 const ProfilePage = ({ className }: ProfilePageProps) => {
   const { t } = useTranslation();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchProfileData());
+  }, [dispatch]);
 
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <div className={classNames('', {}, [className])}>
-        {t('PROFILE PAGE')}
+        <ProfileCard />
       </div>
     </DynamicModuleLoader>
   );

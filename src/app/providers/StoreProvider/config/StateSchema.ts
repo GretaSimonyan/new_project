@@ -14,7 +14,7 @@ export interface StateSchema {
   user: UserSchema;
   // Async reducers
   loginForm?: LoginSchema;
-  profile: ProfileSchema;
+  profile?: ProfileSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;
@@ -31,7 +31,7 @@ export interface ReducerManager {
 
 export interface ThunkExtraArg {
   api: AxiosInstance;
-  navigate: (to: To, options?: NavigateOptions) => void;
+  navigate?: (to: To, options?: NavigateOptions) => void;
 }
 
 export interface ThunkConfig<T> {

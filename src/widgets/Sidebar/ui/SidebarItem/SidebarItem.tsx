@@ -10,7 +10,7 @@ import { SidebarItemType } from '../../model/item';
 import cls from './SidebarItem.module.scss';
 
 interface SidebarItemProps {
-	item?: SidebarItemType;
+	item: SidebarItemType;
   collapsed: boolean;
 }
 
@@ -24,7 +24,9 @@ export const SidebarItem = memo((props: SidebarItemProps) => {
     <AppLink
       theme={AppLinkTheme.SECONDARY}
       to={item.path}
-      className={classNames(cls.item, { [cls.collapsed]: collapsed })}
+      className={classNames(cls.item, {
+        [cls.collapsed]: collapsed,
+      })}
     >
       <item.Icon className={cls.icon} />
       <span className={cls.link}>
