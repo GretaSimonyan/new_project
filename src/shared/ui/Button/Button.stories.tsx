@@ -12,13 +12,19 @@ import {
 export default {
   title: 'shared/Button',
   component: Button,
-  argTypes: { backgroundColor: { control: 'color' } },
+  argTypes: {
+    backgroundColor: {
+      control: 'color',
+    },
+  },
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
 export const Default = Template.bind({});
-Default.args = { children: 'Text' };
+Default.args = {
+  children: 'Text',
+};
 
 export const Clear = Template.bind({});
 Clear.args = {

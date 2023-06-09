@@ -10,6 +10,8 @@ export function buildResolvers(options: BuildOptions): ResolveOptions {
     preferAbsolute: true,
     modules: [options.paths.src, 'node_modules'],
     mainFiles: ['index'],
-    alias: { '@': path.resolve(__dirname, '../../src/') },
+    alias: {
+      '@': path.resolve(__dirname, '../../src/'),
+    },
   };
 }

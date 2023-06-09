@@ -11,7 +11,11 @@ import { Theme } from 'app/providers/ThemeProvider';
 export default {
   title: 'shared/Text',
   component: Text,
-  argTypes: { backgroundColor: { control: 'color' } },
+  argTypes: {
+    backgroundColor: {
+      control: 'color',
+    },
+  },
 } as ComponentMeta<typeof Text>;
 
 const Template: ComponentStory<typeof Text> = (args) => <Text {...args} />;
@@ -30,10 +34,14 @@ Error.args = {
 };
 
 export const onlyTitle = Template.bind({});
-onlyTitle.args = { title: 'Title lorem ipsum' };
+onlyTitle.args = {
+  title: 'Title lorem ipsum',
+};
 
 export const onlyText = Template.bind({});
-onlyText.args = { text: 'Description Description Description Description' };
+onlyText.args = {
+  text: 'Description Description Description Description',
+};
 
 export const PrimaryDark = Template.bind({});
 PrimaryDark.args = {
@@ -43,9 +51,13 @@ PrimaryDark.args = {
 PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const onlyTitleDark = Template.bind({});
-onlyTitleDark.args = { title: 'Title lorem ipsum' };
+onlyTitleDark.args = {
+  title: 'Title lorem ipsum',
+};
 onlyTitleDark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const onlyTextDark = Template.bind({});
-onlyTextDark.args = { text: 'Description Description Description Description' };
+onlyTextDark.args = {
+  text: 'Description Description Description Description',
+};
 onlyTextDark.decorators = [ThemeDecorator(Theme.DARK)];

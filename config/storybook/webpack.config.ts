@@ -13,14 +13,16 @@ export default ({ config }: { config: webpack.Configuration }) => {
     src: path.resolve(__dirname, '..', '..', 'src'),
   };
 
-  config.resolve.modules.push(paths.src);
-  config.resolve.extensions.push('.ts', '.tsx');
-  config.resolve.alias = {
-    ...config.resolve.alias,
+  config!.resolve!.modules!.push(paths.src);
+  config!.resolve!.extensions!.push('.ts', '.tsx');
+  config!.resolve!.alias = {
+    ...config.resolve!.alias,
     '@': path.resolve(__dirname, '../../src/'),
   };
 
-  config.module.rules = config.module.rules.map((rule: webpack.RuleSetRule) => {
+  const rules = config.module!.rules as webpack.RuleSetRule[];
+
+  config!.module!.rules = rules.map((rule: webpack.RuleSetRule) => {
     if (/svg/.test(rule.test as string)) {
       return {
         ...rule,
@@ -31,13 +33,15 @@ export default ({ config }: { config: webpack.Configuration }) => {
     return rule;
   });
 
-  config.module.rules.push({
+  config!.module!.rules.push({
     test: /\.svg$/,
     use: ['@svgr/webpack'],
   });
-  config.module.rules.push(buildCssLoader(true));
+  config!.module!.rules.push(buildCssLoader(true));
 
-  config.plugins.push(new DefinePlugin({ __IS_DEV__: true }));
-
+  config!.plugins!.push(new DefinePlugin({
+    __IS_DEV__: JSON.stringify(true),
+    __API__: JSON.stringify(''),
+  }));
   return config;
 };

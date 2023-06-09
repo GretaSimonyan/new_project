@@ -12,8 +12,14 @@ import {
 export default {
   title: 'shared/AppLink',
   component: AppLink,
-  argTypes: { backgroundColor: { control: 'color' } },
-  args: { to: '/' },
+  argTypes: {
+    backgroundColor: {
+      control: 'color',
+    },
+  },
+  args: {
+    to: '/',
+  },
 } as ComponentMeta<typeof AppLink>;
 
 const Template: ComponentStory<typeof AppLink> = (args) => <AppLink {...args} />;

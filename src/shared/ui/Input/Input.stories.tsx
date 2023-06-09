@@ -7,7 +7,11 @@ import { Input } from 'shared/ui/Input/Input';
 export default {
   title: 'shared/Input',
   component: Input,
-  argTypes: { backgroundColor: { control: 'color' } },
+  argTypes: {
+    backgroundColor: {
+      control: 'color',
+    },
+  },
 } as ComponentMeta<typeof Input>;
 
 const Template: ComponentStory<typeof Input> = (args) => <Input {...args} />;
