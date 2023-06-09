@@ -4,7 +4,7 @@ import {
 
 import {
   Profile, ProfileSchema,
-} from '../types/Profile';
+} from '../types/profile';
 import { fetchProfileData } from '../services/fetchProfileData/fetchProfileData';
 
 const initialState: ProfileSchema = {
