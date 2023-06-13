@@ -1,12 +1,32 @@
 {
   "posts": [
-    { "id": "1", "title": "json-serverqqqq", "author": "wqeqwe" },
-    { "id": "1", "title": "json-serverdddd", "author": "asdasd" },
-    { "id": "1", "title": "json-servervvvv", "author": "sdvds" },
-    { "id": "1", "title": "json-server", "author": "typicode" }
+    {
+      "id": "1",
+      "title": "json-serverqqqq",
+      "author": "wqeqwe"
+    },
+    {
+      "id": "1",
+      "title": "json-serverdddd",
+      "author": "asdasd"
+    },
+    {
+      "id": "1",
+      "title": "json-servervvvv",
+      "author": "sdvds"
+    },
+    {
+      "id": "1",
+      "title": "json-server",
+      "author": "typicode"
+    }
   ],
   "comments": [
-    { "id": "1", "body": "some comment", "postId": 1 }
+    {
+      "id": "1",
+      "body": "some comment",
+      "postId": 1
+    }
   ],
   "users": [
     {
@@ -18,10 +38,10 @@
   "profile": {
     "first": "John",
     "lastname": "Doe",
-    "age": 22,
+    "age": 24,
     "currency": "AMD",
-    "country": "Armenia",
-    "city": "Yerevan",
+    "country": "Belarus",
+    "city": "227hhhhkk",
     "username": "admin",
     "avatar": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg"
   }

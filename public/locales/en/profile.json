@@ -1,6 +1,15 @@
 {
-  "Edit": "",
-  "Profile": "",
-  "Your last name": "",
-  "Your name": ""
+  "Edit": "Edit",
+  "Profile": "Profile",
+  "Your last name": "Your last name",
+  "Your name": "Your name",
+  "Try refreshing the page": "Try refreshing the page",
+  "An error occurred while loading the profile": "An error occurred while loading the profile",
+  "Cancel": "Cancel",
+  "Your city": "Your city",
+  "Your age": "Your age",
+  "Avatar": "Avatar",
+  "User name": "User name",
+  "Specify currency": "Specify currency",
+  "Specify country": "Specify country"
 }
