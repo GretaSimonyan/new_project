@@ -10,10 +10,10 @@ import {
 import { Input } from 'shared/ui/Input/Input';
 import { Loader } from 'shared/ui/Loader/Loader';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
+
 import {
   Country, CountrySelect,
-} from 'entities/Country';
-
+} from '../../../Country';
 import {
   Currency, CurrencySelect,
 } from '../../../Currency';
@@ -84,7 +84,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
         <div>
           {data?.avatar && (
             <div className={cls.avatarWrapper}>
-              <Avatar src={data?.avatar} alt="avatar" />
+              <Avatar src={data?.avatar} />
             </div>
           )}
           <Input

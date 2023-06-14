@@ -1,9 +1,11 @@
 import {
-  classNames, Mods,
-} from 'shared/lib/classNames/classNames';
-import {
   CSSProperties, useMemo,
 } from 'react';
+
+import {
+  classNames,
+  Mods,
+} from '../../lib/classNames/classNames';
 
 import cls from './Avatar.module.scss';
 
