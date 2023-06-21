@@ -5,8 +5,11 @@ import {
 import { loginReducer } from 'features/AuthByUsername/model/slice/loginSlice';
 import { ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 
+import { articleDetailsReducer } from '../../../../entities/Article/model/slice/articleDetailsSlice';
+
 const defaultReducers: ReducersList = {
   loginForm: loginReducer,
+  articleDetails: articleDetailsReducer,
 };
 export const StoreDecorator = (
   state: DeepPartial<StateSchema>,
