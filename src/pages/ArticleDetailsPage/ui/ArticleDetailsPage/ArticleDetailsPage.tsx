@@ -1,4 +1,6 @@
-import { memo } from 'react';
+import {
+  memo, useCallback,
+} from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useParams } from 'react-router-dom';
@@ -10,10 +12,13 @@ import {
   useDispatch, useSelector,
 } from 'react-redux';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
+import { AddCommentForm } from 'features/addCommentForm';
 
+import { addCommentForArticle } from '../../model/services/addCommentForArticle/addCommentForArticle';
 import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 import {
-  articleDetailsCommentsReducer, getArticleComments,
+  articleDetailsCommentsReducer,
+  getArticleComments,
 } from '../../model/slices/articleDetailsCommentsSlice';
 import { CommentList } from '../../../../entities/Comment';
 import { ArticleDetails } from '../../../../entities/Article';
@@ -37,6 +42,10 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
   const isLoading = useSelector(getArticleCommentsIsLoading);
   const dispatch = useDispatch();
 
+  const onSendComment = useCallback((text: string) => {
+    dispatch(addCommentForArticle(text));
+  }, [dispatch]);
+
   useInitialEffect(() => {
     dispatch(fetchCommentsByArticleId(id));
   });
@@ -48,6 +57,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
           <>
             <ArticleDetails id={id} />
             <Text className={cls.commentTitle} title={t('Comments')} />
+            <AddCommentForm onSendComment={onSendComment} />
             <CommentList
               isLoading={isLoading}
               comments={comments}

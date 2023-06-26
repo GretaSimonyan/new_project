@@ -112,6 +112,30 @@
       "text": "some comment 3",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "fffff",
+      "id": "Y0r7l_5"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "tadam tadadadaam dadadm tadadam adm dam",
+      "id": "ij0Coj3"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "everybody just follow meee",
+      "id": "6g79ua_"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "added comment",
+      "id": "XI7ypWO"
     }
   ],
   "users": [
@@ -127,17 +151,31 @@
       "username": "user",
       "password": "123",
       "role": "USER",
-      "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
+      "avatar": "https://www.disneyplusinformer.com/wp-content/uploads/2022/03/Turning-Red-Profile-Avatar.png"
     }
   ],
-  "profile": {
-    "first": "Lina",
-    "lastname": "Doe",
-    "age": 3,
-    "currency": "AMD",
-    "country": "Belarus",
-    "city": "asdasd",
-    "username": "admin",
-    "avatar": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "Lina",
+      "lastname": "Doe",
+      "age": 30,
+      "currency": "AMD",
+      "country": "Belarus",
+      "city": "asdasd",
+      "username": "admin",
+      "avatar": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg"
+    },
+    {
+      "id": "2",
+      "first": "Tina",
+      "lastname": "Doe",
+      "age": 23,
+      "currency": "AMD",
+      "country": "Armenia",
+      "city": "Armenia",
+      "username": "user",
+      "avatar": "https://www.disneyplusinformer.com/wp-content/uploads/2022/03/Turning-Red-Profile-Avatar.png"
+    }
+  ]
 }
