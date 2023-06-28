@@ -1,33 +1,43 @@
-import { memo } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
+import React from 'react';
+import {
+  ComponentMeta, ComponentStory,
+} from '@storybook/react';
 
 import {
-  Article,
-  ArticleList,
-  ArticleView,
-} from '../../../../entities/Article';
+  Article, ArticleView,
+} from '../../model/types/article';
 
-import cls from './ArticlesPage.module.scss';
+import { ArticleListItem } from './ArticleListItem';
 
-interface ArticlesPageProps {
-  className?: string;
-}
+export default {
+  title: 'entities/Article/ArticleListItem',
+  component: ArticleListItem,
+  argTypes: {
+    backgroundColor: {
+      control: 'color',
+    },
+  },
+} as ComponentMeta<typeof ArticleListItem>;
+
+const Template: ComponentStory<typeof ArticleListItem> = (args) => <ArticleListItem {...args} />;
 
 const article = {
   id: '1',
-  title: 'JS news',
-  subtitle: "What's new in js",
-  img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFYh53xY9yR8cu_8EJPtI6xf9vj9GCL-sNsw&usqp=CAU',
+  title: 'Javascript news asfasjf asfjkask f',
+  subtitle: 'Что нового в JS за 2022 год?',
+  img: 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
   views: 1022,
+  createdAt: '26.02.2022',
   user: {
     id: '1',
-    username: 'Name',
-    avatar: '"https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg',
+    username: 'Ulbi tv',
+    avatar: 'https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg',
   },
-  createdAt: '15.06.2023',
   type: [
     'IT',
-    'IT',
+    'SCIENCE',
+    'POLITICS',
+    'ECONOMICS',
   ],
   blocks: [
     {
@@ -90,24 +100,15 @@ const article = {
     },
   ],
 } as Article;
-const ArticlesPage = (props: ArticlesPageProps) => {
-  const { className } = props;
 
-  return (
-    <div className={classNames(cls.ArticlesPage, {}, [className])}>
-      <ArticleList
-        view={ArticleView.LIST}
-        articles={
-          new Array(16)
-            .fill(0)
-            .map((item, index) => ({
-              ...article,
-              id: String(index),
-            }))
-        }
-      />
-    </div>
-  );
+export const List = Template.bind({});
+List.args = {
+  view: ArticleView.LIST,
+  article,
 };
 
-export default memo(ArticlesPage);
+export const Grid = Template.bind({});
+Grid.args = {
+  view: ArticleView.GRID,
+  article,
+};

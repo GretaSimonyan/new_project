@@ -19,6 +19,14 @@
   "No comments": "No comments",
   "PROFILE PAGE": "Profile page",
   "Profile": "Profile",
+  "Read more": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  },
+  "Return": "Return",
   "Save": "Save",
   "Send": "",
   "Server error on save": "Server error on save",
