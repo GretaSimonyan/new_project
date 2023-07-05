@@ -22,7 +22,7 @@ Normal.args = {
   comments: [
     {
       text: 'asd asd',
-      id: '1',
+      id: '23',
       user: {
         id: '1',
         username: 'Jormungat',
