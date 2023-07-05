@@ -31,15 +31,6 @@ export const ArticleList = memo((props: ArticleListProps) => {
     isLoading,
     view = ArticleView.GRID,
   } = props;
-  const { t } = useTranslation();
-
-  if (isLoading) {
-    return (
-      <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
-        {getSkeletons(view)}
-      </div>
-    );
-  }
 
   return (
     <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
@@ -51,6 +42,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
           className={cls.card}
         />
       )) : null}
+      {isLoading && getSkeletons(view)}
     </div>
   );
 });

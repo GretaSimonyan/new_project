@@ -21,6 +21,7 @@ import {
   ButtonTheme,
 } from 'shared/ui/Button/Button';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import { Page } from 'shared/ui/Page/Page';
 
 import { addCommentForArticle } from '../../model/services/addCommentForArticle/addCommentForArticle';
 import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
@@ -65,7 +66,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
 
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-      <div className={classNames('', {}, [className])}>
+      <Page className={classNames('', {}, [className])}>
         <Button
           theme={ButtonTheme.OUTLINE}
           onClick={onBackToList}
@@ -83,7 +84,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
             />
           </>
         ) : t('Article not found') }
-      </div>
+      </Page>
     </DynamicModuleLoader>
   );
 };
