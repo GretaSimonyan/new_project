@@ -19,11 +19,21 @@
   "No comments": "No comments",
   "PROFILE PAGE": "Profile page",
   "Profile": "Profile",
+  "Read more": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  },
+  "Return": "Return",
   "Save": "Save",
+  "Send": "",
   "Server error on save": "Server error on save",
   "Specify country": "Specify country",
   "Specify currency": "Specify currency",
   "Try refreshing the page": "Try refreshing the page",
+  "Type comment": "",
   "Unexpected error": "Unexpected error",
   "User name": "User name",
   "You entered an incorrect username or password": "You entered an incorrect username or password",

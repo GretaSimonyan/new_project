@@ -19,11 +19,21 @@
   "No comments": "No comments",
   "PROFILE PAGE": "Страница профиля",
   "Profile": "Profile",
+  "Read more": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  },
+  "Return": "Return",
   "Save": "Save",
+  "Send": "Send",
   "Server error on save": "Server error on save",
   "Specify country": "hfghhggh",
   "Specify currency": "qwqeqe",
   "Try refreshing the page": "Try refreshing the page",
+  "Type comment": "Type comment",
   "Unexpected error": "Unexpected error",
   "User name": "User name",
   "You entered an incorrect username or password": "Вы ввели неверный логин или пароль",

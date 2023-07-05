@@ -3,7 +3,7 @@ import {
 } from '@reduxjs/toolkit';
 
 import { fetchArticleById } from '../services/fetchArticleById';
-import { Article } from '../types/Article';
+import { Article } from '../types/article';
 import { ArticleDetailsSchema } from '../types/articleDetailsSchema';
 
 const initialState: ArticleDetailsSchema = {

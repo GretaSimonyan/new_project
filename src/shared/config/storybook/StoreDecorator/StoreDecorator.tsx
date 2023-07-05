@@ -4,12 +4,17 @@ import {
 } from 'app/providers/StoreProvider';
 import { loginReducer } from 'features/AuthByUsername/model/slice/loginSlice';
 import { ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { addCommentFormReducer } from 'features/addCommentForm/model/slices/addCommentFormSlice';
 
+import { profileReducer } from '../../../../entities/Profile';
 import { articleDetailsReducer } from '../../../../entities/Article/model/slice/articleDetailsSlice';
 
 const defaultReducers: ReducersList = {
   loginForm: loginReducer,
+  profile: profileReducer,
   articleDetails: articleDetailsReducer,
+  addCommentForm: addCommentFormReducer,
+  articleDetailsComments: articleDetailsReducer,
 };
 export const StoreDecorator = (
   state: DeepPartial<StateSchema>,

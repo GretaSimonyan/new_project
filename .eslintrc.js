@@ -20,6 +20,7 @@ module.exports = {
     'react-hooks',
   ],
   rules: {
+    'no-mixed-spaces-and-tabs': 0,
     'no-tabs': 0,
     'no-undef': 0,
     'react-hooks/rules-of-hooks': 2,

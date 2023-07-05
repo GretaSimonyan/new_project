@@ -15,6 +15,10 @@ const articles: Article = {
   subtitle: "What's new in js",
   img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFYh53xY9yR8cu_8EJPtI6xf9vj9GCL-sNsw&usqp=CAU',
   views: 1022,
+  user: {
+    id: '1',
+    username: 'Name',
+  },
   createdAt: '15.06.2023',
   type: [ArticleType.IT],
   blocks: [
