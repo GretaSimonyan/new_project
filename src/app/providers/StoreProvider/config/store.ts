@@ -3,8 +3,7 @@ import {
   configureStore, Reducer, ReducersMapObject,
 } from '@reduxjs/toolkit';
 import { $api } from 'shared/api/api';
-import { NavigateOptions } from 'react-router';
-import { To } from 'history';
+import { uiReducer } from 'features/UI';
 
 import { counterReducer } from '../../../../entities/Counter/model/slice/counterSlice';
 import { userReducer } from '../../../../entities/User';
@@ -22,6 +21,7 @@ export function createReduxStore(
     ...asyncReducers,
     counter: counterReducer,
     user: userReducer,
+    ui: uiReducer,
   };
 
   const reducerManager = createReducerManager(rootReducers);

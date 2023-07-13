@@ -1,6 +1,4 @@
 import { AxiosInstance } from 'axios';
-import { To } from 'history';
-import { NavigateOptions } from 'react-router';
 import {
   AnyAction,
   CombinedState,
@@ -16,10 +14,12 @@ import { ArticleDetailsSchema } from 'entities/Article';
 import { ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage';
 import { AddCommentFormSchema } from 'features/addCommentForm';
 import { ArticlePageSchema } from 'pages/ArticlesPage/model/types/articlePageSchema';
+import { UISchema } from 'features/UI';
 
 export interface StateSchema {
   counter: CounterSchema;
   user: UserSchema;
+  ui: UISchema;
   // Async reducers
   loginForm?: LoginSchema;
   profile?: ProfileSchema;
