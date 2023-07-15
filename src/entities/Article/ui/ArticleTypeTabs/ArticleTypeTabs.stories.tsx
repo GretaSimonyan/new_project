@@ -3,19 +3,19 @@ import {
 } from '@storybook/react';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 
-import { ArticleViewSelector } from './ArticleViewSelector';
+import { ArticleTypeTabs } from './ArticleTypeTabs';
 
 export default {
-  title: 'entities/Article/ArticleViewSelector',
-  component: ArticleViewSelector,
+  title: 'entities/ArticleTypeTabs',
+  component: ArticleTypeTabs,
   argTypes: {
     backgroundColor: {
       control: 'color',
     },
   },
-} as ComponentMeta<typeof ArticleViewSelector>;
+} as ComponentMeta<typeof ArticleTypeTabs>;
 
-const Template: ComponentStory<typeof ArticleViewSelector> = (args) => <ArticleViewSelector {...args} />;
+const Template: ComponentStory<typeof ArticleTypeTabs> = (args) => <ArticleTypeTabs {...args} />;
 
 export const Normal = Template.bind({});
 Normal.args = {};
