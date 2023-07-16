@@ -28,7 +28,7 @@ module.exports = {
     'linebreak-style': [2, 'unix'],
     'max-len': [2, {
       ignoreComments: true,
-      code: 120,
+      code: 125,
     }],
     'import/no-extraneous-dependencies': 1,
     'no-shadow': 0,
@@ -74,7 +74,7 @@ module.exports = {
     'import/extensions': 0,
     'i18next/no-literal-string': [2, {
       markupOnly: true,
-      ignoreAttribute: ['data-testid', 'to'],
+      ignoreAttribute: ['data-testid', 'to', 'target'],
     }],
     'import/order': ['error', {
       pathGroupsExcludedImportTypes: [],

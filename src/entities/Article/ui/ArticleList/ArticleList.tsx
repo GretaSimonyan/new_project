@@ -19,6 +19,8 @@ interface ArticleListProps {
 	articles: Article[];
 	isLoading?: boolean;
 	view?: ArticleView;
+  // target?: AnchorHTMLAttributes<HTMLAnchorElement>;
+  target?: string;
 }
 
 const getSkeletons = (view: ArticleView) => new Array(view === ArticleView.GRID ? 9 : 3)
@@ -34,6 +36,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
     articles,
     isLoading,
     view = ArticleView.GRID,
+    target,
   } = props;
 
   const { t } = useTranslation();
@@ -50,6 +53,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
           <>
             {articles.length > 0 ? articles.map((article) => (
               <ArticleListItem
+                target={target}
                 article={article}
                 view={view}
                 key={article.id}
