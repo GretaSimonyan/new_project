@@ -3,10 +3,7 @@ import {
 } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
-import {
-  useNavigate,
-  useParams,
-} from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import {
   Text,
   TextSize,
@@ -19,13 +16,9 @@ import {
 } from 'react-redux';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { AddCommentForm } from 'features/addCommentForm';
-import {
-  Button,
-  ButtonTheme,
-} from 'shared/ui/Button/Button';
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { Page } from 'widgets/Page/Page';
 
+import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
 import { articleDetailsPageReducer } from '../../model/slices';
 import { fetchArticleRecommendations } from '../../model/services/fetchArticleRecommendations/fetchArticleRecommendations';
 import { getArticleRecommendationsIsLoading } from '../../model/selectors/recommendations';
@@ -58,11 +51,6 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
   const isLoading = useSelector(getArticleCommentsIsLoading);
   const recommendationsIsLoading = useSelector(getArticleRecommendationsIsLoading);
   const dispatch = useDispatch();
-  const navigate = useNavigate();
-
-  const onBackToList = useCallback(() => {
-    navigate(RoutePath.articles);
-  }, [navigate]);
 
   const onSendComment = useCallback((text: string) => {
     dispatch(addCommentForArticle(text));
@@ -76,14 +64,9 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <Page className={classNames('', {}, [className])}>
-        <Button
-          theme={ButtonTheme.OUTLINE}
-          onClick={onBackToList}
-        >
-          {t('Return')}
-        </Button>
         {id ? (
           <>
+            <ArticleDetailsPageHeader />
             <ArticleDetails id={id} />
             <Text
               size={TextSize.L}
