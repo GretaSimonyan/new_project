@@ -3,7 +3,8 @@ import {
   ComponentStory,
 } from '@storybook/react';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
-import { Text } from 'shared/ui/Text/Text';
+
+import { Text } from '../Text/Text';
 
 import { Card } from './Card';
 

@@ -18,6 +18,7 @@ module.exports = {
     '@typescript-eslint',
     'i18next',
     'react-hooks',
+    'fsd-new',
   ],
   rules: {
     'no-mixed-spaces-and-tabs': 0,
@@ -85,6 +86,7 @@ module.exports = {
       groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
       'newlines-between': 'always',
     }],
+    'fsd-new/path-checker': 'error',
   },
   globals: {
     __IS_DEV__: true,

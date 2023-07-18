@@ -11,9 +11,9 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useSelector } from 'react-redux';
 import { Page } from 'widgets/Page/Page';
 import { PageError } from 'widgets/PageError';
-import { ArticlesPageFilters } from 'pages/ArticlesPage/ui/ArticlesPageFilters/ArticlesPageFilters';
 import { useSearchParams } from 'react-router-dom';
 
+import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters';
 import {
   getArticlesPageError,
   getArticlesPageIsLoading,
@@ -22,15 +22,10 @@ import {
 import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage';
 import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage';
 import {
-  articlesPageActions,
   articlesPageReducer,
   getArticles,
 } from '../../model/slices/articlesPageSlice';
-import {
-  ArticleList,
-  ArticleView,
-  ArticleViewSelector,
-} from '../../../../entities/Article';
+import { ArticleList } from '../../../../entities/Article';
 
 import cls from './ArticlesPage.module.scss';
 
