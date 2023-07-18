@@ -1,6 +1,10 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
+import {
+  Text,
+  TextSize,
+} from 'shared/ui/Text/Text';
 
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
@@ -15,6 +19,8 @@ interface ArticleListProps {
 	articles: Article[];
 	isLoading?: boolean;
 	view?: ArticleView;
+  // target?: AnchorHTMLAttributes<HTMLAnchorElement>;
+  target?: string;
 }
 
 const getSkeletons = (view: ArticleView) => new Array(view === ArticleView.GRID ? 9 : 3)
@@ -30,19 +36,34 @@ export const ArticleList = memo((props: ArticleListProps) => {
     articles,
     isLoading,
     view = ArticleView.GRID,
+    target,
   } = props;
+
+  const { t } = useTranslation();
 
   return (
     <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
-      {articles.length > 0 ? articles.map((article) => (
-        <ArticleListItem
-          article={article}
-          view={view}
-          key={article.id}
-          className={cls.card}
-        />
-      )) : null}
-      {isLoading && getSkeletons(view)}
+      {
+        (!isLoading && !articles.length) ? (
+          <Text
+            size={TextSize.L}
+            title={t('Article not found')}
+          />
+        ) : (
+          <>
+            {articles.length > 0 ? articles.map((article) => (
+              <ArticleListItem
+                target={target}
+                article={article}
+                view={view}
+                key={article.id}
+                className={cls.card}
+              />
+            )) : null}
+            {isLoading && getSkeletons(view)}
+          </>
+        )
+      }
     </div>
   );
 });
