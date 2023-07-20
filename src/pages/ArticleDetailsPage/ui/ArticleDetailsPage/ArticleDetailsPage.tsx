@@ -17,6 +17,7 @@ import {
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { AddCommentForm } from 'features/addCommentForm';
 import { Page } from 'widgets/Page/Page';
+import { VStack } from 'shared/ui/Stack';
 
 import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
 import { articleDetailsPageReducer } from '../../model/slices';
@@ -65,7 +66,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <Page className={classNames('', {}, [className])}>
         {id ? (
-          <>
+          <VStack max gap="16">
             <ArticleDetailsPageHeader />
             <ArticleDetails id={id} />
             <Text
@@ -89,7 +90,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
               isLoading={isLoading}
               comments={comments}
             />
-          </>
+          </VStack>
         ) : t('Article not found') }
       </Page>
     </DynamicModuleLoader>
