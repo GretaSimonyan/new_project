@@ -13,7 +13,8 @@ import { PAGE_ID } from 'widgets/Page/Page';
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
 import {
-  Article, ArticleView,
+  Article,
+  ArticleView,
 } from '../../model/types/article';
 
 import cls from './ArticleList.module.scss';
@@ -44,10 +45,10 @@ export const ArticleList = memo((props: ArticleListProps) => {
   } = props;
 
   const { t } = useTranslation();
-  const isGrid = view === ArticleView.GRID;
+  const isList = view === ArticleView.LIST;
 
-  const itemsPerRow = isGrid ? 1 : 3;
-  const rowCount = isGrid ? articles.length : Math.ceil(articles.length / itemsPerRow);
+  const itemsPerRow = isList ? 1 : 3;
+  const rowCount = isList ? articles.length : Math.ceil(articles.length / itemsPerRow);
   const rowRender = ({ index, isScrolling, key, style }: ListRowProps) => {
     const items = [];
     const fromIndex = index * itemsPerRow;
@@ -106,7 +107,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
           <List
             height={height ?? 700}
             rowCount={rowCount}
-            rowHeight={isGrid ? 700 : 330}
+            rowHeight={isList ? 700 : 330}
             rowRenderer={rowRender}
             width={width ? width - 80 : 700}
             autoHeight

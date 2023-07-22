@@ -21,6 +21,7 @@
   "Editing an article": "",
   "Enter Password": "Enter Password",
   "Enter username": "Enter username",
+  "Error loading articles": "Error loading articles",
   "First and last name are required": "First and last name are required",
   "IT": "IT",
   "Incorrect age": "Incorrect age",
@@ -30,6 +31,7 @@
   "No comments": "No comments",
   "PROFILE PAGE": "Profile page",
   "Profile": "Profile",
+  "Profile notfound": "Profile notfound",
   "Read more": {
     "": {
       "": {
