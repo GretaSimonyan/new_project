@@ -1,5 +1,4 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
 import {
   Text, TextAlign,
@@ -19,7 +18,6 @@ export const ArticleImageBlockComponent = memo((props: ArticleImageBlockComponen
     className,
     block,
   } = props;
-  const { t } = useTranslation();
 
   return (
     <div className={classNames(cls.ArticleImageBlockComponent, {}, [className])}>
