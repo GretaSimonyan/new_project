@@ -18,6 +18,7 @@ module.exports = {
     '@typescript-eslint',
     'i18next',
     'react-hooks',
+    'fsd-new',
   ],
   rules: {
     'no-mixed-spaces-and-tabs': 0,
@@ -74,7 +75,7 @@ module.exports = {
     'import/extensions': 0,
     'i18next/no-literal-string': [2, {
       markupOnly: true,
-      ignoreAttribute: ['data-testid', 'to', 'target'],
+      ignoreAttribute: ['data-testid', 'to', 'target', 'justify', 'align', 'direction', 'gap', 'role'],
     }],
     'import/order': ['error', {
       pathGroupsExcludedImportTypes: [],
@@ -85,6 +86,7 @@ module.exports = {
       groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
       'newlines-between': 'always',
     }],
+    'fsd-new/path-checker': 'error',
   },
   globals: {
     __IS_DEV__: true,

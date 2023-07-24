@@ -1,6 +1,5 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { memo } from 'react';
-import { useTranslation } from 'react-i18next';
 import ListIcon from 'shared/assets/icons/list-24-24.svg';
 import TiledIcon from 'shared/assets/icons/tiled-24-24.svg';
 import {
@@ -35,7 +34,6 @@ export const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
     view,
 	  onViewClick,
   } = props;
-  const { t } = useTranslation();
 
   const onClick = (newView: ArticleView) => () => {
     onViewClick?.(newView);

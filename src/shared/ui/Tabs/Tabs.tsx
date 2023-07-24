@@ -4,10 +4,11 @@ import {
   ReactNode,
   useCallback,
 } from 'react';
+
 import {
   Card,
   CardTheme,
-} from 'shared/ui/Card/Card';
+} from '../Card/Card';
 
 import cls from './Tabs.module.scss';
 

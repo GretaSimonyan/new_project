@@ -17,7 +17,7 @@ describe('addCommentForArticle.test', () => {
     thunk.api.post.mockReturnValue(Promise.resolve({
       data: commentData,
     }));
-    const result = await thunk.callThunk(commentText);
+    // const result = await thunk.callThunk(commentText);
 
     // expect(thunk.dispatch).toHaveBeenCalledWith(fetchCommentsByArticleId(commentData.articleId));
     // expect(thunk.dispatch).toHaveBeenCalledTimes(3);

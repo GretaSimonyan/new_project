@@ -10,6 +10,10 @@ import {
 import { Input } from 'shared/ui/Input/Input';
 import { Loader } from 'shared/ui/Loader/Loader';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
+import {
+  HStack,
+  VStack,
+} from 'shared/ui/Stack';
 
 import {
   Country, CountrySelect,
@@ -60,51 +64,51 @@ export const ProfileCard = (props: ProfileCardProps) => {
 
   if (error) {
     return (
-      <div className={classNames(cls.ProfileCard, {}, [className, cls.error])}>
+      <HStack justify="center" max className={classNames(cls.ProfileCard, {}, [className, cls.error])}>
         <Text
           theme={TextTheme.ERROR}
           title={t('An error occurred while loading the profile')}
           text={t('Try refreshing the page')}
           align={TextAlign.CENTER}
         />
-      </div>
+      </HStack>
     );
   }
 
   return (
-    <div className={classNames(cls.ProfileCard, mods, [className])}>
+    <VStack gap="16" max className={classNames(cls.ProfileCard, mods, [className])}>
       {isLoading ? (
-        <div className={classNames('', {
-          [cls.loading]: true,
-        }, [className])}
+        <HStack
+          justify="center"
+          max
+          className={classNames('', {
+            [cls.loading]: true,
+          }, [className])}
         >
           <Loader />
-        </div>
+        </HStack>
       ) : (
-        <div>
+        <VStack gap="8" max>
           {data?.avatar && (
-            <div className={cls.avatarWrapper}>
+            <HStack justify="center">
               <Avatar src={data?.avatar} />
-            </div>
+            </HStack>
           )}
           <Input
             value={data?.first}
             placeholder={t('Your name')}
-            className={cls.input}
             onChange={onChangeFirstname}
             readonly={readonly}
           />
           <Input
             value={data?.lastname}
             placeholder={t('Your last name')}
-            className={cls.input}
             onChange={onChangeLastname}
             readonly={readonly}
           />
           <Input
             value={data?.age}
             placeholder={t('Your age')}
-            className={cls.input}
             onChange={onChangeAge}
             readonly={readonly}
             onKeyPress={(event) => {
@@ -116,21 +120,18 @@ export const ProfileCard = (props: ProfileCardProps) => {
           <Input
             value={data?.city}
             placeholder={t('Your city')}
-            className={cls.input}
             onChange={onChangeCity}
             readonly={readonly}
           />
           <Input
             value={data?.avatar}
             placeholder={t('Avatar')}
-            className={cls.input}
             onChange={onChangeAvatar}
             readonly={readonly}
           />
           <Input
             value={data?.username}
             placeholder={t('User name')}
-            className={cls.input}
             onChange={onChangeUsername}
             readonly={readonly}
           />
@@ -145,8 +146,8 @@ export const ProfileCard = (props: ProfileCardProps) => {
             onChange={onChangeCountry}
             readonly={readonly}
           />
-        </div>
+        </VStack>
       )}
-    </div>
+    </VStack>
   );
 };
