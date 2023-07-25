@@ -10,7 +10,9 @@
   "Обновить страницу": "Refresh page",
   "throw error": "Throw error",
   "Короткий язык": "En",
-  "Log In": "Log In",
+  "Log In": "LogIn",
+  "Log Out": "LogOut",
+  "Profile": "Profile",
   "You entered an incorrect username or password": "You entered an incorrect username or password",
   "Authorisation form": "Auth form",
   "No comments": "No comments",
@@ -31,5 +33,6 @@
   "Article not found": "Article not found",
   "Recommendations": "Recommendations",
   "Editing an article": "Editing an article with ID =",
-  "Create an article": "Create a new article"
+  "Create an article": "Create a new article",
+  "Specify country": "Specify country"
 }

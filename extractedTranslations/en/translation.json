@@ -21,6 +21,7 @@
   "Editing an article": "",
   "Enter Password": "Enter Password",
   "Enter username": "Enter username",
+  "Error loading articles": "Error loading articles",
   "First and last name are required": "First and last name are required",
   "IT": "IT",
   "Incorrect age": "Incorrect age",
@@ -30,6 +31,7 @@
   "No comments": "No comments",
   "PROFILE PAGE": "Profile page",
   "Profile": "Profile",
+  "Profile notfound": "Profile notfound",
   "Read more": {
     "": {
       "": {
@@ -65,6 +67,7 @@
   "Введите пароль": "Enter пароль",
   "Войти": "Войти",
   "Вы ввели неверный логин или пароль": "Вы ввели неверный логин или пароль",
+  "Выйти": "",
   "Главная": "Главная",
   "Главная страница": "Главная страница",
   "Комментарии": "Комментарии",
@@ -72,6 +75,7 @@
   "О сайте": "О сайте",
   "Обновить страницу": "Обновить страницу",
   "Произошла непредвиденная ошибка": "Произошла непредвиденная ошибка",
+  "Профиль": "",
   "Рекомендуем": "Рекомендуем",
   "Создать статью": "",
   "Статья не найдена": "Статья не найдена",
