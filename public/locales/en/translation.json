@@ -33,6 +33,7 @@
   "Article not found": "Article not found",
   "Recommendations": "Recommendations",
   "Editing an article": "Editing an article with ID =",
-  "Create an article": "Create a new article",
   "Specify country": "Specify country"
+  "Create an article": "Create a new article",
+  "Error loading articles": "Error loading articles"
 }
