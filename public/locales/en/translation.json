@@ -35,5 +35,7 @@
   "Editing an article": "Editing an article with ID =",
   "Specify country": "Specify country",
   "Create an article": "Create a new article",
-  "Error loading articles": "Error loading articles"
+  "Error loading articles": "Error loading articles",
+  "Admin panel": "Admin panel",
+  "You do not have access to this page": "You do not have access to this page"
 }

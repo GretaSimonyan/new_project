@@ -35,5 +35,7 @@
   "Editing an article": "Редактирование статьи с ID =",
   "Create an article": "Создание новой статьи",
   "Error loading articles": "Ошибка, при загрузке статей",
-  "Specify country": "Укажите страну"
+  "Specify country": "Укажите страну",
+  "Admin panel": "Панель администратора",
+  "You do not have access to this page": "У вас нет доступа к этой странице"
 }

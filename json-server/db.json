@@ -594,15 +594,22 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN",
+      "roles": ["ADMIN"],
       "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "role": "USER",
+      "roles": ["USER"],
       "avatar": "https://www.disneyplusinformer.com/wp-content/uploads/2022/03/Turning-Red-Profile-Avatar.png"
+    },
+    {
+      "id": "3",
+      "username": "manager",
+      "password": "123",
+      "roles": ["MANAGER", "ADMIN"],
+      "avatar": "https://www.dexerto.com/cdn-cgi/image/width=3840,quality=75,format=auto/https://editors.dexerto.com/wp-content/uploads/2022/11/30/Wednesday-addams.jpg"
     }
   ],
   "profile": [
@@ -627,6 +634,17 @@
       "city": "Armenia",
       "username": "user",
       "avatar": "https://www.disneyplusinformer.com/wp-content/uploads/2022/03/Turning-Red-Profile-Avatar.png"
+    },
+    {
+      "id": "3",
+      "first": "Ina",
+      "lastname": "Doe",
+      "age": 25,
+      "currency": "AMD",
+      "country": "Armenia",
+      "city": "Armenia",
+      "username": "manager",
+      "avatar": "https://www.dexerto.com/cdn-cgi/image/width=3840,quality=75,format=auto/https://editors.dexerto.com/wp-content/uploads/2022/11/30/Wednesday-addams.jpg"
     }
   ]
 }

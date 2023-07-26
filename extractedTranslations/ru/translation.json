@@ -1,5 +1,6 @@
 {
   "": "",
+  "Admin panel": "Admin panel",
   "All": "All",
   "An error occurred while loading the article": "An error occurred while loading the article",
   "An error occurred while loading the profile": "An error occurred while loading the profile",
@@ -55,6 +56,7 @@
   "Unexpected error": "Unexpected error",
   "User name": "User name",
   "Views Number": "Views Number",
+  "You do not have access to this page": "You do not have access to this page",
   "You entered an incorrect username or password": "Вы ввели неверный логин или пароль",
   "Your age": "Your age",
   "Your city": "Your city",

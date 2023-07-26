@@ -22,7 +22,7 @@ import { Dropdown } from 'shared/ui/Dropdown/Dropdown';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 
 import {
-  getUserAuthData, userActions,
+  getUserAuthData, isUserAdmin, isUserManager, userActions,
 } from '../../../entities/User';
 
 import cls from './Navbar.module.scss';
@@ -34,7 +34,10 @@ export const Navbar = memo(({ className }: NavbarProps) => {
   const { t } = useTranslation();
   const [isAuth, setIsAuth] = useState(false);
   const authData = useSelector(getUserAuthData);
+  const isAdmin = useSelector(isUserAdmin);
+  const isManager = useSelector(isUserManager);
   const dispatch = useDispatch();
+  const isAdminPanelAvailable = isAdmin || isManager;
 
   const onCloseModal = useCallback(() => {
     setIsAuth(false);
@@ -67,6 +70,10 @@ export const Navbar = memo(({ className }: NavbarProps) => {
           direction="bottom left"
           className={cls.dropdown}
           items={[
+            ...(isAdminPanelAvailable ? [{
+              content: t('Admin panel'),
+              href: RoutePath.admin_panel,
+            }] : []),
             {
               content: t('Profile'),
               href: RoutePath.profile + authData.id,
