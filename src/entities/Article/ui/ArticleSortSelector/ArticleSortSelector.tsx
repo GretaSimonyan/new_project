@@ -9,7 +9,7 @@ import {
 } from 'shared/ui/Select/Select';
 import { SortOrder } from 'shared/types';
 
-import { ArticleSortField } from '../../model/types/article';
+import { ArticleSortField } from '../../index';
 
 import cls from './ArticleSortSelector.module.scss';
 

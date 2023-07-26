@@ -4,8 +4,9 @@ import {
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 
 import {
-  Article, ArticleBlockType, ArticleType,
-} from '../../../../entities/Article/model/types/article';
+  ArticleBlockType, ArticleType,
+} from '../../../../entities/Article/model/consts/consts';
+import { Article } from '../../../../entities/Article/model/types/article';
 
 import ArticleDetailsPage from './ArticleDetailsPage';
 

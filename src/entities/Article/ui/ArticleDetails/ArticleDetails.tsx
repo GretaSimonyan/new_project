@@ -21,6 +21,7 @@ import {
   HStack, VStack,
 } from 'shared/ui/Stack';
 
+import { ArticleBlockType } from '../../model/consts/consts';
 import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
@@ -31,9 +32,7 @@ import {
   getArticleDetailsError,
   getArticleDetailsIsLoading,
 } from '../../model/selectors/articleDetails';
-import {
-  ArticleBlock, ArticleBlockType,
-} from '../../model/types/article';
+import { ArticleBlock } from '../../model/types/article';
 
 import cls from './ArticleDetails.module.scss';
 
