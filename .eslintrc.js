@@ -31,7 +31,7 @@ module.exports = {
       ignoreComments: true,
       code: 125,
     }],
-    'import/no-extraneous-dependencies': 1,
+    'import/no-extraneous-dependencies': ["error", {"devDependencies": true}],
     'no-shadow': 0,
     'react/jsx-props-no-spreading': 1,
     'no-underscore-dangle': 0,
