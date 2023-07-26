@@ -7,7 +7,7 @@ import {
 } from 'shared/ui/Text/Text';
 import { VStack } from 'shared/ui/Stack';
 
-import { ArticleList } from '../../../../entities/Article';
+import { ArticleList } from '../../../../entities/Article/ui/ArticleList/ArticleList';
 import { useArticleRecommendationsList } from '../../api/aritcleRecommendationsApi';
 
 interface ArticleRecommendationsListProps {

@@ -15,10 +15,11 @@ import { ArticleType } from 'entities/Article/model/consts/consts';
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
 import {
   ArticleSortField,
-  ArticleSortSelector, ArticleTypeTabs,
   ArticleView,
-  ArticleViewSelector,
 } from '../../../../entities/Article';
+import { ArticleSortSelector } from '../../../../entities/Article/ui/ArticleSortSelector/ArticleSortSelector';
+import { ArticleTypeTabs } from '../../../../entities/Article/ui/ArticleTypeTabs/ArticleTypeTabs';
+import { ArticleViewSelector } from '../../../../entities/Article/ui/ArticleViewSelector/ArticleViewSelector';
 import {
   getArticlesPageOrder,
   getArticlesPageSearch,
