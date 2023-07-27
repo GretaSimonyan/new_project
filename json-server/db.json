@@ -587,6 +587,12 @@
       "userId": "1",
       "text": "asdasdasd",
       "id": "M6CMbcR"
+    },
+    {
+      "articleId": "9",
+      "userId": "2",
+      "text": "tiri piri",
+      "id": "CgQli9M"
     }
   ],
   "users": [
@@ -594,21 +600,28 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "roles": ["ADMIN"],
+      "roles": [
+        "ADMIN"
+      ],
       "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "roles": ["USER"],
+      "roles": [
+        "USER"
+      ],
       "avatar": "https://www.disneyplusinformer.com/wp-content/uploads/2022/03/Turning-Red-Profile-Avatar.png"
     },
     {
       "id": "3",
       "username": "manager",
       "password": "123",
-      "roles": ["MANAGER", "ADMIN"],
+      "roles": [
+        "MANAGER",
+        "ADMIN"
+      ],
       "avatar": "https://www.dexerto.com/cdn-cgi/image/width=3840,quality=75,format=auto/https://editors.dexerto.com/wp-content/uploads/2022/11/30/Wednesday-addams.jpg"
     }
   ],
