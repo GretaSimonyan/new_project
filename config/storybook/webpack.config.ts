@@ -1,6 +1,9 @@
-import path from 'path';
+import * as path from 'path';
 
-import webpack, { DefinePlugin } from 'webpack';
+import * as webpack from 'webpack';
+import {
+  DefinePlugin, RuleSetRule,
+} from 'webpack';
 
 import { BuildPaths } from '../build/types/config';
 import { buildCssLoader } from '../build/loaders/buildCssLoader';
@@ -22,9 +25,9 @@ export default ({ config }: { config: webpack.Configuration }) => {
     '@': path.resolve(__dirname, '../../src/'),
   };
 
-  const rules = config.module!.rules as webpack.RuleSetRule[];
+  const rules = config.module!.rules as RuleSetRule[];
 
-  config!.module!.rules = rules.map((rule: webpack.RuleSetRule) => {
+  config!.module!.rules = rules.map((rule: RuleSetRule) => {
     if (/svg/.test(rule.test as string)) {
       return {
         ...rule,
@@ -43,7 +46,7 @@ export default ({ config }: { config: webpack.Configuration }) => {
 
   config!.plugins!.push(new DefinePlugin({
     __IS_DEV__: JSON.stringify(true),
-    __API__: JSON.stringify(''),
+    __API__: JSON.stringify('https://testapi.com'),
     __PROJECT__: JSON.stringify('storybook'),
   }));
   return config;

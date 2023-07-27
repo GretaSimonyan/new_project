@@ -3,9 +3,8 @@ import {
   ComponentMeta, ComponentStory,
 } from '@storybook/react';
 
-import {
-  Article, ArticleView,
-} from '../../model/types/article';
+import { ArticleView } from '../../index';
+import { Article } from '../../model/types/article';
 
 import { ArticleList } from './ArticleList';
 

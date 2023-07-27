@@ -1,7 +1,5 @@
 import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
 
-import { fetchCommentsByArticleId } from '../fetchCommentsByArticleId/fetchCommentsByArticleId';
-
 import { addCommentForArticle } from './addCommentForArticle';
 // todo this test doesnt work
 describe('addCommentForArticle.test', () => {

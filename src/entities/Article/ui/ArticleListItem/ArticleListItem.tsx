@@ -5,7 +5,6 @@ import { Text } from 'shared/ui/Text/Text';
 import { Card } from 'shared/ui/Card/Card';
 import { Icon } from 'shared/ui/Icon/Icon';
 import EyeIcon from 'shared/assets/icons/eye-20-20.svg';
-import { useHover } from 'shared/lib/hooks/useHover/useHover';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 import {
   Button, ButtonTheme,
@@ -14,7 +13,10 @@ import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { AppLink } from 'shared/ui/AppLink/AppLink';
 
 import {
-  Article, ArticleBlockType, ArticleTextBlock, ArticleView,
+  ArticleBlockType, ArticleView,
+} from '../../model/consts/consts';
+import {
+  Article, ArticleTextBlock,
 } from '../../model/types/article';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 
@@ -36,8 +38,6 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
     target,
   } = props;
   const { t } = useTranslation();
-
-  const [isHover, bindHover] = useHover();
 
   const types = <Text text={article.type.join(', ')} className={cls.types} />;
   const views = (
@@ -88,7 +88,6 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
     <AppLink
       target={target}
       to={RoutePath.article_details + article.id}
-      {...bindHover}
       className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}
     >
       <Card>
