@@ -1,24 +1,36 @@
 {
-  "posts": [
+  "notifications": [
     {
       "id": "1",
-      "title": "json-serverqqqq",
-      "author": "wqeqwe"
+      "title": "Уведомление 1",
+      "description": "Произошло какое-то событие",
+      "userId": "1"
     },
     {
-      "id": "1",
-      "title": "json-serverdddd",
-      "author": "asdasd"
+      "id": "2",
+      "title": "Уведомление 2",
+      "description": "Произошло какое-то событие",
+      "userId": "1",
+      "href": "http://localhost:3000/admin"
     },
     {
-      "id": "1",
-      "title": "json-servervvvv",
-      "author": "sdvds"
+      "id": "3",
+      "title": "Уведомление 3",
+      "description": "Произошло какое-то событие",
+      "userId": "1",
+      "href": "http://localhost:3000/admin"
     },
     {
-      "id": "1",
-      "title": "json-server",
-      "author": "typicode"
+      "id": "4",
+      "title": "Уведомление 4",
+      "description": "Произошло какое-то событие",
+      "userId": "1"
+    },
+    {
+      "id": "5",
+      "title": "Уведомление 1",
+      "description": "Произошло какое-то событие",
+      "userId": "2"
     }
   ],
   "articles": [

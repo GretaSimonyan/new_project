@@ -3,12 +3,12 @@ import {
 } from '@storybook/react';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 
-import { Button } from '../Button/Button';
+import { Button } from '../../../Button/Button';
 
 import { Dropdown } from './Dropdown';
 
 export default {
-  title: 'shared/Dropdown',
+  title: 'shared/popups/Dropdown',
   component: Dropdown,
   argTypes: {
     backgroundColor: {

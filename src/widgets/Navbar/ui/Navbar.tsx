@@ -18,8 +18,11 @@ import {
   Text, TextTheme,
 } from 'shared/ui/Text/Text';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
-import { Dropdown } from 'shared/ui/Dropdown/Dropdown';
+import { Dropdown } from 'shared/ui/Popups/ui/Dropdown/Dropdown';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
+import { HStack } from 'shared/ui/Stack';
+import { NotificationButton } from 'features/notificationButton';
+import { AvatarDropdown } from 'features/avatarDropdown';
 
 import {
   getUserAuthData, isUserAdmin, isUserManager, userActions,
@@ -34,10 +37,6 @@ export const Navbar = memo(({ className }: NavbarProps) => {
   const { t } = useTranslation();
   const [isAuth, setIsAuth] = useState(false);
   const authData = useSelector(getUserAuthData);
-  const isAdmin = useSelector(isUserAdmin);
-  const isManager = useSelector(isUserManager);
-  const dispatch = useDispatch();
-  const isAdminPanelAvailable = isAdmin || isManager;
 
   const onCloseModal = useCallback(() => {
     setIsAuth(false);
@@ -46,10 +45,6 @@ export const Navbar = memo(({ className }: NavbarProps) => {
   const onShowModal = useCallback(() => {
     setIsAuth(true);
   }, []);
-
-  const onLogout = useCallback(() => {
-    dispatch(userActions.logout());
-  }, [dispatch]);
 
   if (authData) {
     return (
@@ -62,29 +57,13 @@ export const Navbar = memo(({ className }: NavbarProps) => {
         <AppLink
           to={RoutePath.article_create}
           theme={AppLinkTheme.SECONDARY}
-          className={cls.createBtn}
         >
           {t('Create an article')}
         </AppLink>
-        <Dropdown
-          direction="bottom left"
-          className={cls.dropdown}
-          items={[
-            ...(isAdminPanelAvailable ? [{
-              content: t('Admin panel'),
-              href: RoutePath.admin_panel,
-            }] : []),
-            {
-              content: t('Profile'),
-              href: RoutePath.profile + authData.id,
-            },
-            {
-              content: t('Log Out'),
-              onClick: onLogout,
-            },
-          ]}
-          trigger={<Avatar size={30} src={authData.avatar} />}
-        />
+        <HStack gap="16" className={cls.actions}>
+          <NotificationButton />
+          <AvatarDropdown />
+        </HStack>
       </header>
     );
   }
