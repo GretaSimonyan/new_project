@@ -10,7 +10,7 @@ import {
   TextSize,
 } from '@/shared/ui/Text/Text';
 
-import { ArticleView } from '../../model/consts/articleConsts';
+import { ArticleView } from '../../model/consts/consts';
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
 import { Article } from '../../model/types/article';
@@ -25,9 +25,10 @@ interface ArticleListProps {
   view?: ArticleView;
 }
 
-const getSkeletons = (view: ArticleView) => new Array(view === ArticleView.SMALL ? 9 : 3)
+const getSkeletons = (view: ArticleView) => new Array(view === ArticleView.GRID ? 9 : 3)
   .fill(0)
   .map((item, index) => (
+    // eslint-disable-next-line react/no-array-index-key
     <ArticleListItemSkeleton className={cls.card} key={index} view={view} />
   ));
 
@@ -35,7 +36,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
   const {
     className,
     articles,
-    view = ArticleView.SMALL,
+    view = ArticleView.GRID,
     isLoading,
     target,
   } = props;

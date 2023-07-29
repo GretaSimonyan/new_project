@@ -7,12 +7,13 @@ import {
   Route,
   Routes,
 } from 'react-router-dom';
-import { PageLoader } from 'widgets/PageLoader/PageLoader';
+
+import { PageLoader } from '@/widgets/PageLoader/PageLoader';
 import {
   AppRoutesProps,
   routeConfig,
-} from 'shared/config/routeConfig/routeConfig';
-import { RequireAuth } from 'app/providers/router/ui/RequireAuth';
+} from '@/shared/config/routeConfig/routeConfig';
+import { RequireAuth } from '@/app/providers/router/ui/RequireAuth';
 
 const AppRouter = () => {
   const renderWithWrapper = useCallback((route: AppRoutesProps) => {
