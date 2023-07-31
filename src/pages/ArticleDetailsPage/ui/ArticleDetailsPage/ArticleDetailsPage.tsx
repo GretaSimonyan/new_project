@@ -11,6 +11,7 @@ import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitial
 import { Page } from '@/widgets/Page/Page';
 import { VStack } from '@/shared/ui/Stack';
 import { ArticleRecommendationsList } from '@/features/articleRecommendationsList';
+import { ArticleRating } from '@/features/articleRating';
 
 import { ArticleDetailsComments } from '../ArticleDetailsComments/ArticleDetailsComments';
 import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
@@ -38,6 +39,10 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
     dispatch(fetchCommentsByArticleId(id));
   });
 
+  if (!id) {
+    return null;
+  }
+
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
@@ -45,6 +50,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
           <VStack max gap="16">
             <ArticleDetailsPageHeader />
             <ArticleDetails id={id} />
+            <ArticleRating articleId={id} />
             <ArticleRecommendationsList />
             <ArticleDetailsComments id={id} />
           </VStack>
