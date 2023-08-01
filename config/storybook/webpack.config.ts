@@ -22,7 +22,7 @@ export default ({ config }: { config: webpack.Configuration }) => {
   config!.resolve!.extensions!.push('.ts', '.tsx');
   config!.resolve!.alias = {
     ...config.resolve!.alias,
-    '@': path.resolve(__dirname, '../../src/'),
+    '@': paths.src,
   };
 
   const rules = config.module!.rules as RuleSetRule[];
