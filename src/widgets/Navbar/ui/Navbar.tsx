@@ -3,27 +3,26 @@ import React, {
   useCallback, useState,
 } from 'react';
 import { useTranslation } from 'react-i18next';
-import { classNames } from 'shared/lib/classNames/classNames';
-import { LoginModal } from 'features/AuthByUsername';
+import { useSelector } from 'react-redux';
+
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { LoginModal } from '@/features/AuthByUsername';
 import {
   Button, ButtonTheme,
-} from 'shared/ui/Button/Button';
-import {
-  useDispatch, useSelector,
-} from 'react-redux';
+} from '@/shared/ui/Button/Button';
 import {
   AppLink, AppLinkTheme,
-} from 'shared/ui/AppLink/AppLink';
+} from '@/shared/ui/AppLink/AppLink';
 import {
   Text, TextTheme,
-} from 'shared/ui/Text/Text';
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
-import { Dropdown } from 'shared/ui/Dropdown/Dropdown';
-import { Avatar } from 'shared/ui/Avatar/Avatar';
+} from '@/shared/ui/Text/Text';
+import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
+import { HStack } from '@/shared/ui/Stack';
+import { NotificationButton } from '@/features/notificationButton';
+import { AvatarDropdown } from '@/features/avatarDropdown';
+import { Drawer } from '@/shared/ui/Drawer/Drawer';
 
-import {
-  getUserAuthData, isUserAdmin, isUserManager, userActions,
-} from '../../../entities/User';
+import { getUserAuthData } from '../../../entities/User';
 
 import cls from './Navbar.module.scss';
 
@@ -34,10 +33,6 @@ export const Navbar = memo(({ className }: NavbarProps) => {
   const { t } = useTranslation();
   const [isAuth, setIsAuth] = useState(false);
   const authData = useSelector(getUserAuthData);
-  const isAdmin = useSelector(isUserAdmin);
-  const isManager = useSelector(isUserManager);
-  const dispatch = useDispatch();
-  const isAdminPanelAvailable = isAdmin || isManager;
 
   const onCloseModal = useCallback(() => {
     setIsAuth(false);
@@ -46,10 +41,6 @@ export const Navbar = memo(({ className }: NavbarProps) => {
   const onShowModal = useCallback(() => {
     setIsAuth(true);
   }, []);
-
-  const onLogout = useCallback(() => {
-    dispatch(userActions.logout());
-  }, [dispatch]);
 
   if (authData) {
     return (
@@ -62,29 +53,13 @@ export const Navbar = memo(({ className }: NavbarProps) => {
         <AppLink
           to={RoutePath.article_create}
           theme={AppLinkTheme.SECONDARY}
-          className={cls.createBtn}
         >
           {t('Create an article')}
         </AppLink>
-        <Dropdown
-          direction="bottom left"
-          className={cls.dropdown}
-          items={[
-            ...(isAdminPanelAvailable ? [{
-              content: t('Admin panel'),
-              href: RoutePath.admin_panel,
-            }] : []),
-            {
-              content: t('Profile'),
-              href: RoutePath.profile + authData.id,
-            },
-            {
-              content: t('Log Out'),
-              onClick: onLogout,
-            },
-          ]}
-          trigger={<Avatar size={30} src={authData.avatar} />}
-        />
+        <HStack gap="16" className={cls.actions}>
+          <NotificationButton />
+          <AvatarDropdown />
+        </HStack>
       </header>
     );
   }

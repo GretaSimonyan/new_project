@@ -37,5 +37,9 @@
   "Error loading articles": "Ошибка, при загрузке статей",
   "Specify country": "Укажите страну",
   "Admin panel": "Панель администратора",
-  "You do not have access to this page": "У вас нет доступа к этой странице"
+  "You do not have access to this page": "У вас нет доступа к этой странице",
+  "Your feedback": "Ваш отзыв",
+  "Leave your feedback about the article": "Оставьте свой отзыв о статье, это поможет высшего качества",
+  "Rate the article": "Оцените статью",
+  "Thanks for rate": "Спасибо за оценку"
 }

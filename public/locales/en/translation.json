@@ -37,5 +37,9 @@
   "Create an article": "Create a new article",
   "Error loading articles": "Error loading articles",
   "Admin panel": "Admin panel",
-  "You do not have access to this page": "You do not have access to this page"
+  "You do not have access to this page": "You do not have access to this page",
+  "Your feedback": "Your feedback",
+  "Leave your feedback about the article": "Leave your feedback about the article, it will help the highest quality",
+  "Rate the article": "Rate the article",
+  "Thanks for rate": "Thanks for rate"
 }
