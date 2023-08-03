@@ -6,7 +6,7 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import {
   Button,
   ButtonTheme,
-} from '../Button/Button';
+} from '../../../../shared/ui/Button/Button';
 
 interface LangSwitcherProps {
   className?: string;

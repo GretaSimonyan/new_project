@@ -8,7 +8,7 @@ import {
   Routes,
 } from 'react-router-dom';
 
-import { PageLoader } from '@/widgets/PageLoader/PageLoader';
+import { PageLoader } from '@/widgets/PageLoader';
 import {
   AppRoutesProps,
   routeConfig,
