@@ -9,9 +9,9 @@ import {
   Button,
   ButtonTheme,
 } from '@/shared/ui/Button/Button';
-import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { HStack } from '@/shared/ui/Stack';
+import { RoutePath } from '@/shared/const/route';
 
 import { getCanEditArticle } from '../../model/selectors/article';
 import { getArticleDetailsData } from '../../../../entities/Article';
