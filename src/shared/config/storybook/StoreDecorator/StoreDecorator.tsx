@@ -3,17 +3,12 @@ import { Story } from '@storybook/react';
 import {
   StateSchema, StoreProvider,
 } from '@/app/providers/StoreProvider';
-// TODO
-// eslint-disable-next-line fsd-new/public-api-imports
-import { loginReducer } from '@/features/AuthByUsername/model/slice/loginSlice';
+import { loginReducer } from '@/features/AuthByUsername/testing';
 import { ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-// eslint-disable-next-line fsd-new/public-api-imports
-import { addCommentFormReducer } from '@/features/addCommentForm/model/slices/addCommentFormSlice';
-// eslint-disable-next-line fsd-new/public-api-imports
-import { profileReducer } from '@/features/editableProfileCard/model/slice/profileSlice';
-
-import { articleDetailsPageReducer } from '../../../../pages/ArticleDetailsPage/model/slices';
-import { articleDetailsReducer } from '../../../../entities/Article/model/slice/articleDetailsSlice';
+import { addCommentFormReducer } from '@/features/addCommentForm/testing';
+import { profileReducer } from '@/features/editableProfileCard/testing';
+import { articleDetailsPageReducer } from '@/pages/ArticleDetailsPage/testing';
+import { articleDetailsReducer } from '@/entities/Article/testing';
 
 const defaultReducers: ReducersList = {
   loginForm: loginReducer,
