@@ -91,6 +91,13 @@ module.exports = {
     'fsd-new/path-checker': ['error', {
       alias: '@',
     }],
+    'fsd-new/layer-imports': [
+      'error',
+      {
+        alias: '@',
+        ignoreImportPatterns: ['**/StoreDecorator.tsx', '**/testing'],
+      },
+    ],
     'fsd-new/public-api-imports': [
       'error',
       {

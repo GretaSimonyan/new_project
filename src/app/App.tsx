@@ -6,12 +6,13 @@ import {
 } from 'react-redux';
 
 import { classNames } from '@/shared/lib/classNames/classNames';
-import AppRouter from '@/app/providers/router';
 import {
   getUserMounted, userActions,
 } from '@/entities/User';
 import { Navbar } from '@/widgets/Navbar';
 import { Sidebar } from '@/widgets/Sidebar';
+
+import AppRouter from './providers/router';
 
 const App = () => {
   const dispatch = useDispatch();
