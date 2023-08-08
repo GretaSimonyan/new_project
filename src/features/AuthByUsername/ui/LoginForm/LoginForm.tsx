@@ -7,11 +7,11 @@ import {
 import { classNames } from '@/shared/lib/classNames/classNames';
 import {
   Button, ButtonTheme,
-} from '@/shared/ui/Button/Button';
-import { Input } from '@/shared/ui/Input/Input';
+} from '@/shared/ui/Button';
+import { Input } from '@/shared/ui/Input';
 import {
   Text, TextTheme,
-} from '@/shared/ui/Text/Text';
+} from '@/shared/ui/Text';
 import {
   DynamicModuleLoader, ReducersList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';

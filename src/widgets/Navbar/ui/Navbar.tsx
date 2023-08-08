@@ -9,17 +9,17 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { LoginModal } from '@/features/AuthByUsername';
 import {
   Button, ButtonTheme,
-} from '@/shared/ui/Button/Button';
+} from '@/shared/ui/Button';
 import {
   AppLink, AppLinkTheme,
-} from '@/shared/ui/AppLink/AppLink';
+} from '@/shared/ui/AppLink';
 import {
   Text, TextTheme,
-} from '@/shared/ui/Text/Text';
+} from '@/shared/ui/Text';
 import { HStack } from '@/shared/ui/Stack';
 import { NotificationButton } from '@/features/notificationButton';
 import { AvatarDropdown } from '@/features/avatarDropdown';
-import { Drawer } from '@/shared/ui/Drawer/Drawer';
+import { Drawer } from '@/shared/ui/Drawer';
 import { RoutePath } from '@/shared/const/route';
 
 import { getUserAuthData } from '../../../entities/User';

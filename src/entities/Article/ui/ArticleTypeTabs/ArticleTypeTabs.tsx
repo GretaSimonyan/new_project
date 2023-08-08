@@ -9,7 +9,7 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import {
   TabItem,
   Tabs,
-} from '@/shared/ui/Tabs/Tabs';
+} from '@/shared/ui/Tabs';
 
 import { ArticleType } from '../../index';
 
