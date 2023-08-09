@@ -19,8 +19,16 @@ module.exports = {
     'i18next',
     'react-hooks',
     'fsd-new',
+    'unused-imports',
   ],
   rules: {
+    'unused-imports/no-unused-imports': 'error',
+    'unused-imports/no-unused-vars': [
+      'warn',
+      {
+        vars: 'all', varsIgnorePattern: '^_', args: 'after-used', argsIgnorePattern: '^_',
+      },
+    ],
     'no-mixed-spaces-and-tabs': 0,
     'no-tabs': 0,
     'no-undef': 0,
