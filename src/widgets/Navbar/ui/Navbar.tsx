@@ -1,6 +1,7 @@
 import React, {
   memo,
-  useCallback, useState,
+  useCallback,
+  useState,
 } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
@@ -8,20 +9,22 @@ import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { LoginModal } from '@/features/AuthByUsername';
 import {
-  Button, ButtonTheme,
+  Button,
+  ButtonTheme,
 } from '@/shared/ui/Button';
 import {
-  AppLink, AppLinkTheme,
+  AppLink,
+  AppLinkTheme,
 } from '@/shared/ui/AppLink';
 import {
-  Text, TextTheme,
+  Text,
+  TextTheme,
 } from '@/shared/ui/Text';
 import { HStack } from '@/shared/ui/Stack';
 import { NotificationButton } from '@/features/notificationButton';
 import { AvatarDropdown } from '@/features/avatarDropdown';
 import { RoutePath } from '@/shared/const/route';
-
-import { getUserAuthData } from '../../../entities/User';
+import { getUserAuthData } from '@/entities/User';
 
 import cls from './Navbar.module.scss';
 
