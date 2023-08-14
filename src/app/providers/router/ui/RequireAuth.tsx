@@ -8,7 +8,10 @@ import { useMemo } from 'react';
 import {
   getUserAuthData, getUserRoles, UserRole,
 } from '@/entities/User';
-import { RoutePath } from '@/shared/const/route';
+import {
+  getRouteForbidden,
+  getRouteMain,
+} from '@/shared/const/route';
 
 interface RequireAuthProps {
   children: JSX.Element;
@@ -38,7 +41,7 @@ export const RequireAuth = (props: RequireAuthProps) => {
   if (!auth) {
     return (
       <Navigate
-        to={RoutePath.main}
+        to={getRouteMain()}
         state={{
           from: location,
         }}
@@ -50,7 +53,7 @@ export const RequireAuth = (props: RequireAuthProps) => {
   if (!hasRequiredRoles) {
     return (
       <Navigate
-        to={RoutePath.forbidden}
+        to={getRouteForbidden()}
         state={{
           from: location,
         }}
