@@ -7,25 +7,24 @@ import {
   Button, ButtonTheme,
 } from '@/shared/ui/Button';
 import { Icon } from '@/shared/ui/Icon';
-
-import { ArticleView } from '../../index';
+import { ArticleView } from '@/entities/Article';
 
 import cls from './ArticleViewSelector.module.scss';
 
 interface ArticleViewSelectorProps {
   className?: string;
-	view: ArticleView;
-	onViewClick?: (view: ArticleView) => void;
+  view: ArticleView;
+  onViewClick?: (view: ArticleView) => void;
 }
 
 const viewTypes = [
   {
     view: ArticleView.GRID,
-	  icon: ListIcon,
+    icon: ListIcon,
   },
   {
     view: ArticleView.LIST,
-	  icon: TiledIcon,
+    icon: TiledIcon,
   },
 ];
 
@@ -33,7 +32,7 @@ export const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
   const {
     className,
     view,
-	  onViewClick,
+    onViewClick,
   } = props;
 
   const onClick = (newView: ArticleView) => () => {
@@ -55,7 +54,7 @@ export const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
             })}
           />
         </Button>
-	    ))}
+      ))}
     </div>
   );
 });

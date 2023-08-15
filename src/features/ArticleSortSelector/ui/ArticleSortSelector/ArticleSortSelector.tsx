@@ -9,8 +9,7 @@ import {
   Select, SelectOption,
 } from '@/shared/ui/Select';
 import { SortOrder } from '@/shared/types';
-
-import { ArticleSortField } from '../../index';
+import { ArticleSortField } from '@/entities/Article';
 
 import cls from './ArticleSortSelector.module.scss';
 

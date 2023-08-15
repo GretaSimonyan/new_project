@@ -7,7 +7,7 @@ import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDe
 import { ArticleSortSelector } from './ArticleSortSelector';
 
 export default {
-  title: 'entities/Article/ArticleSortSelector',
+  title: 'features/ArticleSortSelector',
   component: ArticleSortSelector,
   argTypes: {
     backgroundColor: {

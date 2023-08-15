@@ -11,16 +11,16 @@ import { Card } from '@/shared/ui/Card';
 import { Input } from '@/shared/ui/Input';
 import { SortOrder } from '@/shared/types';
 import { useDebounce } from '@/shared/lib/hooks/useDebounce/useDebounce';
-import { ArticleType } from '@/entities/Article';
-
-import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
 import {
+  ArticleType,
   ArticleSortField,
   ArticleView,
-} from '../../../../entities/Article';
-import { ArticleSortSelector } from '../../../../entities/Article/ui/ArticleSortSelector/ArticleSortSelector';
-import { ArticleTypeTabs } from '../../../../entities/Article/ui/ArticleTypeTabs/ArticleTypeTabs';
-import { ArticleViewSelector } from '../../../../entities/Article/ui/ArticleViewSelector/ArticleViewSelector';
+} from '@/entities/Article';
+import { ArticleSortSelector } from '@/features/ArticleSortSelector';
+import { ArticleTypeTabs } from '@/features/ArticleTypeTabs';
+import { ArticleViewSelector } from '@/features/ArticleViewSelector';
+
+import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
 import {
   getArticlesPageOrder,
   getArticlesPageSearch,
