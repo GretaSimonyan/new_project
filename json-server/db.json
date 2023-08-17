@@ -700,6 +700,13 @@
       "rate": 3,
       "feedback": "",
       "id": "UT9w4WT"
+    },
+    {
+      "userId": "2",
+      "articleId": "5",
+      "rate": 5,
+      "feedback": "",
+      "id": "Sqs_nv2"
     }
   ],
   "profile-ratings": [

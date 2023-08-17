@@ -3,8 +3,8 @@ import {
 } from 'react';
 
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Icon } from '@/shared/ui/Icon/Icon';
 
+import { Icon } from '../Icon/Icon';
 import starIcon from '../../assets/icons/star.svg';
 
 import cls from './StarRating.module.scss';

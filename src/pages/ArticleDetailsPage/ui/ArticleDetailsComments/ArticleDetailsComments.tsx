@@ -12,11 +12,11 @@ import {
 import { classNames } from '@/shared/lib/classNames/classNames';
 import {
   Text, TextSize,
-} from '@/shared/ui/Text/Text';
+} from '@/shared/ui/Text';
 import { AddCommentForm } from '@/features/addCommentForm';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { VStack } from '@/shared/ui/Stack';
-import { Loader } from '@/shared/ui/Loader/Loader';
+import { Loader } from '@/shared/ui/Loader';
 
 import { CommentList } from '../../../../entities/Comment';
 import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';

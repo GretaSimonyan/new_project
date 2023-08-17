@@ -5,7 +5,7 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import {
   Text,
   TextSize,
-} from '@/shared/ui/Text/Text';
+} from '@/shared/ui/Text';
 import { VStack } from '@/shared/ui/Stack';
 
 import { ArticleList } from '../../../../entities/Article/ui/ArticleList/ArticleList';

@@ -1,5 +1,3 @@
-import path from 'path';
-
 import webpack from 'webpack';
 
 import { BuildOptions } from './types/config';
@@ -25,7 +23,7 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
       rules: buildLoaders(options),
     },
     resolve: buildResolvers(options),
-    devtool: isDev ? 'inline-source-map' : undefined,
+    devtool: isDev ? 'eval-cheap-module-source-map' : undefined,
     devServer: buildDevServer(options),
   };
 }

@@ -8,7 +8,7 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import {
   Text,
   TextSize,
-} from '@/shared/ui/Text/Text';
+} from '@/shared/ui/Text';
 
 import { ArticleView } from '../../model/consts/consts';
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';

@@ -6,7 +6,7 @@ import React, {
 } from 'react';
 
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { useTheme } from '@/app/providers/ThemeProvider';
+import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
 
 import {
   AnimationProvider, useAnimationLibs,

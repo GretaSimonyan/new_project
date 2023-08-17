@@ -19,8 +19,16 @@ module.exports = {
     'i18next',
     'react-hooks',
     'fsd-new',
+    'unused-imports',
   ],
   rules: {
+    'unused-imports/no-unused-imports': 'error',
+    'unused-imports/no-unused-vars': [
+      'warn',
+      {
+        vars: 'all', varsIgnorePattern: '^_', args: 'after-used', argsIgnorePattern: '^_',
+      },
+    ],
     'no-mixed-spaces-and-tabs': 0,
     'no-tabs': 0,
     'no-undef': 0,
@@ -31,7 +39,9 @@ module.exports = {
       ignoreComments: true,
       code: 125,
     }],
-    'import/no-extraneous-dependencies': ["error", {"devDependencies": true}],
+    'import/no-extraneous-dependencies': ['error', {
+      devDependencies: true,
+    }],
     'no-shadow': 0,
     'react/jsx-props-no-spreading': 1,
     'no-underscore-dangle': 0,
@@ -86,7 +96,23 @@ module.exports = {
       groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
       'newlines-between': 'always',
     }],
-    'fsd-new/path-checker': 'error',
+    'fsd-new/path-checker': ['error', {
+      alias: '@',
+    }],
+    'fsd-new/layer-imports': [
+      'error',
+      {
+        alias: '@',
+        ignoreImportPatterns: ['**/StoreDecorator.tsx', '**/testing'],
+      },
+    ],
+    'fsd-new/public-api-imports': [
+      'error',
+      {
+        alias: '@',
+        testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx'],
+      },
+    ],
   },
   globals: {
     __IS_DEV__: true,

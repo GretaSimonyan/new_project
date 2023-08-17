@@ -13,7 +13,7 @@ import { Country } from '@/entities/Country';
 import {
   Text,
   TextTheme,
-} from '@/shared/ui/Text/Text';
+} from '@/shared/ui/Text';
 import {
   DynamicModuleLoader,
   ReducersList,
