@@ -22,12 +22,12 @@ import {
   HStack, VStack,
 } from '@/shared/ui/Stack';
 
+import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice';
 import { ArticleBlockType } from '../../model/consts/consts';
 import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import { fetchArticleById } from '../../model/services/fetchArticleById';
-import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice';
 import {
   getArticleDetailsData,
   getArticleDetailsError,
