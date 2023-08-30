@@ -1,4 +1,4 @@
-module.exports = {
+const config = {
   stories: [
     '../../src/**/*.stories.@(js|jsx|ts|tsx)',
   ],
@@ -22,3 +22,4 @@ module.exports = {
     reactDocgen: 'react-docgen-typescript-plugin',
   },
 };
+export default config;
