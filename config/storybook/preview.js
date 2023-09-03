@@ -5,11 +5,9 @@ import { RouterDecorator } from '../../src/shared/config/storybook/RouterDecorat
 import { SuspenseDecorator } from '../../src/shared/config/storybook/SuspenseDecorator/SuspenseDecorator';
 import { Theme } from '../../src/shared/const/theme';
 
-export const preview = {
-  parameters: {
-    actions: {
-      argTypesRegex: '^on[A-Z].*',
-    },
+export const parameters = {
+  actions: {
+    argTypesRegex: '^on[A-Z].*',
   },
   controls: {
     matchers: {
@@ -33,7 +31,6 @@ export const preview = {
     ],
   },
 };
-export default preview;
 
 addDecorator(StyleDecorator);
 addDecorator(RouterDecorator);
