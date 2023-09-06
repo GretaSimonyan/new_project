@@ -605,6 +605,12 @@
       "userId": "2",
       "text": "tiri piri",
       "id": "CgQli9M"
+    },
+    {
+      "articleId": "2",
+      "userId": "1",
+      "text": "comm",
+      "id": "RVJw3tn"
     }
   ],
   "users": [
@@ -635,6 +641,15 @@
         "ADMIN"
       ],
       "avatar": "https://www.dexerto.com/cdn-cgi/image/width=3840,quality=75,format=auto/https://editors.dexerto.com/wp-content/uploads/2022/11/30/Wednesday-addams.jpg"
+    },
+    {
+      "id": "4",
+      "username": "testuser",
+      "password": "123",
+      "roles": [
+        "ADMIN"
+      ],
+      "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
     }
   ],
   "profile": [
@@ -645,7 +660,7 @@
       "age": 30,
       "currency": "EUR",
       "country": "Armenia",
-      "city": "asdasd",
+      "city": "Horshubay",
       "username": "admin",
       "avatar": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg"
     },
