@@ -7,7 +7,10 @@ import {
 
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Input } from '@/shared/ui/Input';
-import { Button } from '@/shared/ui/Button';
+import {
+  Button,
+  ButtonTheme,
+} from '@/shared/ui/Button';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import {
   DynamicModuleLoader,
@@ -53,15 +56,23 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
 
   return (
     <DynamicModuleLoader reducers={reducers}>
-      <HStack justify="between" max className={classNames(cls.AddCommentForm, {}, [className])}>
+      <HStack
+        data-testid="AddCommentForm"
+        justify="between"
+        max
+        className={classNames(cls.AddCommentForm, {}, [className])}
+      >
         <Input
           className={cls.input}
           placeholder={t('Type comment')}
           value={text}
           onChange={onCommentTextChange}
+          data-testid="AddCommentForm.Input"
         />
         <Button
           onClick={onSendHandler}
+          theme={ButtonTheme.OUTLINE}
+          data-testid="AddCommentForm.Button"
         >
           {t('Send')}
         </Button>
