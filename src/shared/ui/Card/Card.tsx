@@ -1,7 +1,4 @@
-import {
-  HTMLAttributes,
-  memo, ReactNode,
-} from 'react';
+import { HTMLAttributes, memo, ReactNode } from 'react';
 
 import { classNames } from '@/shared/lib/classNames/classNames';
 
@@ -13,7 +10,7 @@ export enum CardTheme {
 }
 interface CardProps extends HTMLAttributes<HTMLDivElement> {
   className?: string;
-	children: ReactNode;
+  children: ReactNode;
   theme?: CardTheme;
   max?: boolean;
 }
@@ -29,9 +26,13 @@ export const Card = memo((props: CardProps) => {
 
   return (
     <div
-      className={classNames(cls.Card, {
-        [cls.max]: max,
-      }, [className, cls[theme]])}
+      className={classNames(
+        cls.Card,
+        {
+          [cls.max]: max,
+        },
+        [className, cls[theme]],
+      )}
       {...otherProps}
     >
       {children}

@@ -1,14 +1,8 @@
 import { useTranslation } from 'react-i18next';
-import {
-  HTMLAttributeAnchorTarget,
-  memo,
-} from 'react';
+import { HTMLAttributeAnchorTarget, memo } from 'react';
 
 import { classNames } from '@/shared/lib/classNames/classNames';
-import {
-  Text,
-  TextSize,
-} from '@/shared/ui/Text';
+import { Text, TextSize } from '@/shared/ui/Text';
 
 import { ArticleView } from '../../model/consts/consts';
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
@@ -19,15 +13,14 @@ import cls from './ArticleList.module.scss';
 
 interface ArticleListProps {
   className?: string;
-  articles: Article[]
+  articles: Article[];
   isLoading?: boolean;
   target?: HTMLAttributeAnchorTarget;
   view?: ArticleView;
 }
 
-const getSkeletons = (view: ArticleView) => new Array(view === ArticleView.GRID ? 9 : 3)
-  .fill(0)
-  .map((item, index) => (
+const getSkeletons = (view: ArticleView) =>
+  new Array(view === ArticleView.GRID ? 9 : 3).fill(0).map((item, index) => (
     // eslint-disable-next-line react/no-array-index-key
     <ArticleListItemSkeleton className={cls.card} key={index} view={view} />
   ));
@@ -45,10 +38,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
   if (!isLoading && !articles.length) {
     return (
       <div className={classNames('', {}, [className, cls[view]])}>
-        <Text
-          size={TextSize.L}
-          title={t('Article not found')}
-        />
+        <Text size={TextSize.L} title={t('Article not found')} />
       </div>
     );
   }

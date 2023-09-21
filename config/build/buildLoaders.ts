@@ -13,10 +13,12 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
   };
 
   const codeBabelLoader = buildBabelLoader({
-    ...options, isTsx: false,
+    ...options,
+    isTsx: false,
   });
   const tsxCodeBabelLoader = buildBabelLoader({
-    ...options, isTsx: true,
+    ...options,
+    isTsx: true,
   });
 
   const cssLoader = buildCssLoader(isDev);

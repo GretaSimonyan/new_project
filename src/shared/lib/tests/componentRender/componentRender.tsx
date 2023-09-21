@@ -5,9 +5,7 @@ import { MemoryRouter } from 'react-router-dom';
 import { ReducersMapObject } from '@reduxjs/toolkit';
 
 import i18nForTests from '@/shared/config/i18n/i18nForTests';
-import {
-  StateSchema, StoreProvider,
-} from '@/app/providers/StoreProvider';
+import { StateSchema, StoreProvider } from '@/app/providers/StoreProvider';
 import { Theme } from '@/shared/const/theme';
 import { ThemeProvider } from '@/app/providers/ThemeProvider';
 import '@/app/styles/index.scss';
@@ -38,9 +36,7 @@ export function TestProvider(props: TestProviderProps) {
       <StoreProvider asyncReducers={asyncReducers} initialState={initialState}>
         <I18nextProvider i18n={i18nForTests}>
           <ThemeProvider initialTheme={theme}>
-            <div className={`app ${theme}`}>
-              {children}
-            </div>
+            <div className={`app ${theme}`}>{children}</div>
           </ThemeProvider>
         </I18nextProvider>
       </StoreProvider>
@@ -48,6 +44,9 @@ export function TestProvider(props: TestProviderProps) {
   );
 }
 
-export function componentRender(component: ReactNode, options: componentRenderOptions = {}) {
+export function componentRender(
+  component: ReactNode,
+  options: componentRenderOptions = {},
+) {
   return render(<TestProvider options={options}>{component}</TestProvider>);
 }

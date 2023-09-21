@@ -35,8 +35,8 @@ export interface StateSchema {
 
 export type StateSchemaKey = keyof StateSchema;
 
-export interface ReduxStoreWithManager extends EnhancedStore<StateSchema>{
-  reducerManager: ReducerManager
+export interface ReduxStoreWithManager extends EnhancedStore<StateSchema> {
+  reducerManager: ReducerManager;
 }
 
 export type MountedReducers = OptionalRecord<StateSchemaKey, boolean>;

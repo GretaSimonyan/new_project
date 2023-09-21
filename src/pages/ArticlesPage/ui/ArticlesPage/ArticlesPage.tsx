@@ -1,6 +1,4 @@
-import {
-  memo, useCallback,
-} from 'react';
+import { memo, useCallback } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
 import { classNames } from '@/shared/lib/classNames/classNames';

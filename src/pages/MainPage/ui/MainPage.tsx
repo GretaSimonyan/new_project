@@ -9,9 +9,7 @@ const MainPage = memo(() => {
   return (
     <Page data-testid="MainPage">
       {t('Главная страница')}
-      <div>
-        {t('текст')}
-      </div>
+      <div>{t('текст')}</div>
     </Page>
   );
 });

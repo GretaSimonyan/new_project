@@ -1,8 +1,6 @@
 import { Story } from '@storybook/react';
 
-import {
-  StateSchema, StoreProvider,
-} from '@/app/providers/StoreProvider';
+import { StateSchema, StoreProvider } from '@/app/providers/StoreProvider';
 import { loginReducer } from '@/features/AuthByUsername/testing';
 import { ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { addCommentFormReducer } from '@/features/addCommentForm/testing';
@@ -17,16 +15,16 @@ const defaultReducers: ReducersList = {
   addCommentForm: addCommentFormReducer,
   articleDetailsPage: articleDetailsPageReducer,
 };
-export const StoreDecorator = (
-  state: DeepPartial<StateSchema>,
-  asyncReducers?: ReducersList,
-) => (StoryComponent: Story) => (
-  <StoreProvider
-    initialState={state}
-    asyncReducers={{
-      ...defaultReducers, ...asyncReducers,
-    }}
-  >
-    <StoryComponent />
-  </StoreProvider>
-);
+export const StoreDecorator =
+  (state: DeepPartial<StateSchema>, asyncReducers?: ReducersList) =>
+  (StoryComponent: Story) => (
+    <StoreProvider
+      initialState={state}
+      asyncReducers={{
+        ...defaultReducers,
+        ...asyncReducers,
+      }}
+    >
+      <StoryComponent />
+    </StoreProvider>
+  );

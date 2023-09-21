@@ -9,12 +9,11 @@ module.exports = {
     'airbnb',
     'plugin:i18next/recommended',
     'plugin:storybook/recommended',
+    'plugin:prettier/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
+    ecmaFeatures: { jsx: true },
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
@@ -29,12 +28,7 @@ module.exports = {
   ],
   rules: {
     'prettier/prettier': 'error',
-    'react/jsx-max-props-per-line': [
-      'error',
-      {
-        maximum: 2,
-      },
-    ],
+    'react/jsx-max-props-per-line': ['error', { maximum: 4 }],
     'unused-imports/no-unused-imports': 'error',
     'unused-imports/no-unused-vars': [
       'warn',
@@ -49,7 +43,7 @@ module.exports = {
     'react-hooks/rules-of-hooks': 2,
     'react-hooks/exhaustive-deps': 2,
     'linebreak-style': [2, 'unix'],
-    'implicit-arrow-linebreak': ['error', 'beside'],
+    'implicit-arrow-linebreak': 0,
     'max-len': [
       2,
       {
@@ -57,12 +51,7 @@ module.exports = {
         code: 125,
       },
     ],
-    'import/no-extraneous-dependencies': [
-      'error',
-      {
-        devDependencies: true,
-      },
-    ],
+    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     'no-shadow': 0,
     'react/jsx-props-no-spreading': 1,
     'no-underscore-dangle': 0,
@@ -83,26 +72,7 @@ module.exports = {
     'no-use-before-define': 0,
     'no-param-reassign': 0,
     'operator-linebreak': 0,
-    'object-curly-newline': [
-      'error',
-      {
-        ObjectExpression: {
-          multiline: true,
-          minProperties: 1,
-        },
-        ObjectPattern: {
-          multiline: true,
-        },
-        ImportDeclaration: {
-          multiline: true,
-          minProperties: 2,
-        },
-        ExportDeclaration: {
-          multiline: true,
-          minProperties: 2,
-        },
-      },
-    ],
+    'object-curly-newline': 0,
     'object-curly-spacing': ['error', 'always'],
     'no-console': 1,
     'no-debugger': 1,
@@ -148,12 +118,7 @@ module.exports = {
         'newlines-between': 'always',
       },
     ],
-    'fsd-new/path-checker': [
-      'error',
-      {
-        alias: '@',
-      },
-    ],
+    'fsd-new/path-checker': ['error', { alias: '@' }],
     'fsd-new/layer-imports': [
       'error',
       {

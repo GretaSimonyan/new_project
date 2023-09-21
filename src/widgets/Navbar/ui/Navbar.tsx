@@ -1,25 +1,12 @@
-import React, {
-  memo,
-  useCallback,
-  useState,
-} from 'react';
+import React, { memo, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { LoginModal } from '@/features/AuthByUsername';
-import {
-  Button,
-  ButtonTheme,
-} from '@/shared/ui/Button';
-import {
-  AppLink,
-  AppLinkTheme,
-} from '@/shared/ui/AppLink';
-import {
-  Text,
-  TextTheme,
-} from '@/shared/ui/Text';
+import { Button, ButtonTheme } from '@/shared/ui/Button';
+import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink';
+import { Text, TextTheme } from '@/shared/ui/Text';
 import { HStack } from '@/shared/ui/Stack';
 import { NotificationButton } from '@/features/notificationButton';
 import { AvatarDropdown } from '@/features/avatarDropdown';
@@ -29,7 +16,7 @@ import { getUserAuthData } from '@/entities/User';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {
-	className?: string;
+  className?: string;
 }
 export const Navbar = memo(({ className }: NavbarProps) => {
   const { t } = useTranslation();
@@ -52,10 +39,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
           title={t('App')}
           theme={TextTheme.INVERTED}
         />
-        <AppLink
-          to={getRouteArticleCreate()}
-          theme={AppLinkTheme.SECONDARY}
-        >
+        <AppLink to={getRouteArticleCreate()} theme={AppLinkTheme.SECONDARY}>
           {t('Create an article')}
         </AppLink>
         <HStack gap="16" className={cls.actions}>
@@ -75,12 +59,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
       >
         {t('Log In')}
       </Button>
-      { isAuth && (
-        <LoginModal
-          isOpen={isAuth}
-          onClose={onCloseModal}
-        />
-      )}
+      {isAuth && <LoginModal isOpen={isAuth} onClose={onCloseModal} />}
     </header>
   );
 });

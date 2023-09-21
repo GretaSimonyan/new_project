@@ -1,6 +1,4 @@
-import {
-  ComponentMeta, ComponentStory,
-} from '@storybook/react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 
@@ -20,7 +18,8 @@ const Template: ComponentStory<typeof Code> = (args) => <Code {...args} />;
 
 export const Normal = Template.bind({});
 Normal.args = {
-  text: 'export default {\n' +
+  text:
+    'export default {\n' +
     "  title: 'pages/Code',\n" +
     '  component: Code,\n' +
     '  argTypes: {\n' +

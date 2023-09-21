@@ -1,8 +1,8 @@
-@import "reset";
-@import "./variables/global";
-@import "./themes/normal";
-@import "./themes/dark";
-@import "./themes/green";
+@import 'reset';
+@import './variables/global';
+@import './themes/normal';
+@import './themes/dark';
+@import './themes/green';
 
 body {
   font: var(--font-m);
@@ -25,6 +25,6 @@ body {
 
 *::-webkit-scrollbar-thumb {
   background-color: var(--inverted-secondary-color); /* цвет плашки */
-  border-radius: 20px;  /* закругления плашки */
-  border: 2px solid var(--secondary-color);  /* padding вокруг плашки */
+  border-radius: 20px; /* закругления плашки */
+  border: 2px solid var(--secondary-color); /* padding вокруг плашки */
 }

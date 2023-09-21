@@ -1,11 +1,6 @@
-import {
-  configureStore,
-  ReducersMapObject,
-} from '@reduxjs/toolkit';
+import { configureStore, ReducersMapObject } from '@reduxjs/toolkit';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import {
-  CombinedState, Reducer,
-} from 'redux';
+import { CombinedState, Reducer } from 'redux';
 
 import { counterReducer } from '@/entities/Counter';
 import { userReducer } from '@/entities/User';
@@ -13,9 +8,7 @@ import { $api } from '@/shared/api/api';
 import { uiReducer } from '@/features/UI';
 import { rtkApi } from '@/shared/api/rtkApi';
 
-import {
-  StateSchema, ThunkExtraArg,
-} from './StateSchema';
+import { StateSchema, ThunkExtraArg } from './StateSchema';
 import { createReducerManager } from './reducerManager';
 
 export function createReduxStore(
@@ -40,11 +33,12 @@ export function createReduxStore(
     reducer: reducerManager.reduce as Reducer<CombinedState<StateSchema>>,
     devTools: __IS_DEV__,
     preloadedState: initialState,
-    middleware: (getDefaultMiddleware) => getDefaultMiddleware({
-      thunk: {
-        extraArgument: extraArg,
-      },
-    }).concat(rtkApi.middleware),
+    middleware: (getDefaultMiddleware) =>
+      getDefaultMiddleware({
+        thunk: {
+          extraArgument: extraArg,
+        },
+      }).concat(rtkApi.middleware),
   });
 
   // @ts-ignore

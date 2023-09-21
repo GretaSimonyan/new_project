@@ -43,7 +43,8 @@ describe('app/router/AppRouter', () => {
       route: getRouteProfile('1'),
       initialState: {
         user: {
-          _mounted: true, authData: {},
+          _mounted: true,
+          authData: {},
         },
       },
     });
@@ -57,7 +58,8 @@ describe('app/router/AppRouter', () => {
       route: getRouteAdmin(),
       initialState: {
         user: {
-          _mounted: true, authData: {},
+          _mounted: true,
+          authData: {},
         },
       },
     });

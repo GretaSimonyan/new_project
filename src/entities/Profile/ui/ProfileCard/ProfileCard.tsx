@@ -1,27 +1,14 @@
 import { useTranslation } from 'react-i18next';
 
-import {
-  classNames, Mods,
-} from '@/shared/lib/classNames/classNames';
-import {
-  Text,
-  TextAlign,
-  TextTheme,
-} from '@/shared/ui/Text';
+import { classNames, Mods } from '@/shared/lib/classNames/classNames';
+import { Text, TextAlign, TextTheme } from '@/shared/ui/Text';
 import { Input } from '@/shared/ui/Input';
 import { Loader } from '@/shared/ui/Loader';
 import { Avatar } from '@/shared/ui/Avatar';
-import {
-  HStack,
-  VStack,
-} from '@/shared/ui/Stack';
+import { HStack, VStack } from '@/shared/ui/Stack';
 
-import {
-  Country, CountrySelect,
-} from '../../../Country';
-import {
-  Currency, CurrencySelect,
-} from '../../../Currency';
+import { Country, CountrySelect } from '../../../Country';
+import { Currency, CurrencySelect } from '../../../Currency';
 import { Profile } from '../../../Profile';
 
 import cls from './ProfileCard.module.scss';
@@ -65,7 +52,11 @@ export const ProfileCard = (props: ProfileCardProps) => {
 
   if (error) {
     return (
-      <HStack justify="center" max className={classNames(cls.ProfileCard, {}, [className, cls.error])}>
+      <HStack
+        justify="center"
+        max
+        className={classNames(cls.ProfileCard, {}, [className, cls.error])}
+      >
         <Text
           theme={TextTheme.ERROR}
           title={t('An error occurred while loading the profile')}
@@ -77,14 +68,22 @@ export const ProfileCard = (props: ProfileCardProps) => {
   }
 
   return (
-    <VStack gap="16" max className={classNames(cls.ProfileCard, mods, [className])}>
+    <VStack
+      gap="16"
+      max
+      className={classNames(cls.ProfileCard, mods, [className])}
+    >
       {isLoading ? (
         <HStack
           justify="center"
           max
-          className={classNames('', {
-            [cls.loading]: true,
-          }, [className])}
+          className={classNames(
+            '',
+            {
+              [cls.loading]: true,
+            },
+            [className],
+          )}
         >
           <Loader />
         </HStack>
