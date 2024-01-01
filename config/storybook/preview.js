@@ -20,13 +20,19 @@ export const parameters = {
     default: 'light',
     list: [
       {
-        name: 'light', class: [Theme.LIGHT, 'app'], color: '#b0e2f5',
+        name: 'light',
+        class: [Theme.LIGHT, 'app'],
+        color: '#b0e2f5',
       },
       {
-        name: 'dark', class: [Theme.DARK, 'app'], color: '#0f2d6c',
+        name: 'dark',
+        class: [Theme.DARK, 'app'],
+        color: '#0f2d6c',
       },
       {
-        name: 'green', class: [Theme.GREEN, 'app'], color: '#4b6920',
+        name: 'green',
+        class: [Theme.GREEN, 'app'],
+        color: '#4b6920',
       },
     ],
   },

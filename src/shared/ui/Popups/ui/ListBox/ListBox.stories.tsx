@@ -1,6 +1,4 @@
-import {
-  ComponentMeta, ComponentStory,
-} from '@storybook/react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import { ListBox } from './ListBox';
 
@@ -14,9 +12,10 @@ export default {
   },
   decorators: [
     (Story) => (
-      <div style={{
-        padding: 100,
-      }}
+      <div
+        style={{
+          padding: 100,
+        }}
       >
         <Story />
       </div>
@@ -24,17 +23,21 @@ export default {
   ],
 } as ComponentMeta<typeof ListBox>;
 
-const Template: ComponentStory<typeof ListBox> = (args) => <ListBox {...args} />;
+const Template: ComponentStory<typeof ListBox> = (args) => (
+  <ListBox {...args} />
+);
 
 export const Normal = Template.bind({});
 Normal.args = {
   value: '123',
   items: [
     {
-      content: '1asfasfasf23', value: '123',
+      content: '1asfasfasf23',
+      value: '123',
     },
     {
-      content: '1asfasfasf21233', value: '1232',
+      content: '1asfasfasf21233',
+      value: '1232',
     },
   ],
 };
@@ -45,10 +48,12 @@ topLeft.args = {
   value: '123',
   items: [
     {
-      content: '1asfasfasf23', value: '123',
+      content: '1asfasfasf23',
+      value: '123',
     },
     {
-      content: '1asfasfasf21233', value: '1232',
+      content: '1asfasfasf21233',
+      value: '1232',
     },
   ],
 };
@@ -59,10 +64,12 @@ topRight.args = {
   value: '123',
   items: [
     {
-      content: '1asfasfasf23', value: '123',
+      content: '1asfasfasf23',
+      value: '123',
     },
     {
-      content: '1asfasfasf21233', value: '1232',
+      content: '1asfasfasf21233',
+      value: '1232',
     },
   ],
 };
@@ -73,10 +80,12 @@ bottomLeft.args = {
   value: '123',
   items: [
     {
-      content: '1asfasfasf23', value: '123',
+      content: '1asfasfasf23',
+      value: '123',
     },
     {
-      content: '1asfasfasf21233', value: '1232',
+      content: '1asfasfasf21233',
+      value: '1232',
     },
   ],
 };
@@ -87,10 +96,12 @@ bottomRight.args = {
   value: '123',
   items: [
     {
-      content: '1asfasfasf23', value: '123',
+      content: '1asfasfasf23',
+      value: '123',
     },
     {
-      content: '1asfasfasf21233', value: '1232',
+      content: '1asfasfasf21233',
+      value: '1232',
     },
   ],
 };

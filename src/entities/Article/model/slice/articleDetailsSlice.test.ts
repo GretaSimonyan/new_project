@@ -1,6 +1,4 @@
-import {
-  ArticleBlockType, ArticleType,
-} from '../consts/consts';
+import { ArticleBlockType, ArticleType } from '../consts/consts';
 import { Article } from '../types/article';
 import { fetchArticleById } from '../services/fetchArticleById';
 import { articleDetailsReducer } from '../slice/articleDetailsSlice';
@@ -39,10 +37,12 @@ describe('profileSlice.test', () => {
       error: 'error',
     };
 
-    expect(articleDetailsReducer(
-      state as ArticleDetailsSchema,
-      fetchArticleById.pending,
-    )).toEqual({
+    expect(
+      articleDetailsReducer(
+        state as ArticleDetailsSchema,
+        fetchArticleById.pending,
+      ),
+    ).toEqual({
       isLoading: true,
       error: undefined,
     });
@@ -53,10 +53,12 @@ describe('profileSlice.test', () => {
       isLoading: true,
     };
 
-    expect(articleDetailsReducer(
-      state as ArticleDetailsSchema,
-      fetchArticleById.fulfilled(article, '1', '1'), // todo arguments is wrong I guess
-    )).toEqual({
+    expect(
+      articleDetailsReducer(
+        state as ArticleDetailsSchema,
+        fetchArticleById.fulfilled(article, '1', '1'), // todo arguments is wrong I guess
+      ),
+    ).toEqual({
       isLoading: false,
       error: undefined,
       data: article,

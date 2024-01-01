@@ -1,8 +1,4 @@
-import {
-  Fragment,
-  memo,
-  ReactNode,
-} from 'react';
+import { Fragment, memo, ReactNode } from 'react';
 import { Listbox as HListBox } from '@headlessui/react';
 
 import { classNames } from '@/shared/lib/classNames/classNames';
@@ -57,11 +53,11 @@ export const ListBox = memo((props: ListBoxProps) => {
         onChange={onChange}
       >
         <HListBox.Button className={popupCls.trigger}>
-          <Button disabled={readonly}>
-            {value ?? defaultValue}
-          </Button>
+          <Button disabled={readonly}>{value ?? defaultValue}</Button>
         </HListBox.Button>
-        <HListBox.Options className={classNames(cls.options, {}, optionsClasses)}>
+        <HListBox.Options
+          className={classNames(cls.options, {}, optionsClasses)}
+        >
           {items?.map((item) => (
             <HListBox.Option
               key={item.value}
@@ -70,15 +66,12 @@ export const ListBox = memo((props: ListBoxProps) => {
               as={Fragment}
             >
               {/* eslint-disable-next-line react/no-unused-prop-types */}
-              {({ active, selected }: { active: any, selected: any }) => (
+              {({ active, selected }: { active: any; selected: any }) => (
                 <li
-                  className={classNames(
-                    cls.item,
-                    {
-                      [popupCls.active]: active,
-                      [popupCls.disabled]: item.disabled,
-                    },
-                  )}
+                  className={classNames(cls.item, {
+                    [popupCls.active]: active,
+                    [popupCls.disabled]: item.disabled,
+                  })}
                 >
                   {selected && '!!!'}
                   {item.content}

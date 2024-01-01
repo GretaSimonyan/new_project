@@ -1,6 +1,4 @@
-import {
-  createSlice, PayloadAction,
-} from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 import { LoginSchema } from '../../index';
 import { loginByUsername } from '../services/loginByUsername/loginByUsername';

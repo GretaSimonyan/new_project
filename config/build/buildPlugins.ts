@@ -9,7 +9,12 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 import { BuildOptions } from './types/config';
 
-export function buildPlugins({ paths, isDev, apiUrl, project }: BuildOptions): webpack.WebpackPluginInstance[] {
+export function buildPlugins({
+  paths,
+  isDev,
+  apiUrl,
+  project,
+}: BuildOptions): webpack.WebpackPluginInstance[] {
   const isProd = !isDev;
 
   const plugins = [
@@ -40,9 +45,11 @@ export function buildPlugins({ paths, isDev, apiUrl, project }: BuildOptions): w
   if (isDev) {
     plugins.push(new ReactRefreshWebpackPlugin());
     plugins.push(new webpack.HotModuleReplacementPlugin());
-    plugins.push(new BundleAnalyzerPlugin({
-      openAnalyzer: false,
-    }));
+    plugins.push(
+      new BundleAnalyzerPlugin({
+        openAnalyzer: false,
+      }),
+    );
   }
 
   if (isProd) {
@@ -56,7 +63,8 @@ export function buildPlugins({ paths, isDev, apiUrl, project }: BuildOptions): w
       new CopyPlugin({
         patterns: [
           {
-            from: paths.locales, to: paths.buildLocales,
+            from: paths.locales,
+            to: paths.buildLocales,
           },
         ],
       }),

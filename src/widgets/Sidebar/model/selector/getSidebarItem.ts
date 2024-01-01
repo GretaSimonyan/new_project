@@ -14,38 +14,35 @@ import { getUserAuthData } from '@/entities/User';
 
 import { SidebarItemType } from '../types/sidebar';
 
-export const getSidebarItem = createSelector(
-  getUserAuthData,
-  (userData) => {
-    const sidebarItemList: SidebarItemType[] = [
-      {
-        path: getRouteMain(),
-        Icon: MainIcon,
-        text: 'main',
-      },
-      {
-        path: getRouteAbout(),
-        Icon: AboutIcon,
-        text: 'about',
-      },
-    ];
+export const getSidebarItem = createSelector(getUserAuthData, (userData) => {
+  const sidebarItemList: SidebarItemType[] = [
+    {
+      path: getRouteMain(),
+      Icon: MainIcon,
+      text: 'main',
+    },
+    {
+      path: getRouteAbout(),
+      Icon: AboutIcon,
+      text: 'about',
+    },
+  ];
 
-    if (userData) {
-      sidebarItemList.push(
-        {
-          path: getRouteProfile(userData.id),
-          Icon: ProfileIcon,
-          text: 'profile',
-          authOnly: true,
-        },
-        {
-          path: getRouteArticles(),
-          Icon: ArticlesIcon,
-          text: 'articles',
-          authOnly: true,
-        },
-      );
-    }
-    return sidebarItemList;
-  },
-);
+  if (userData) {
+    sidebarItemList.push(
+      {
+        path: getRouteProfile(userData.id),
+        Icon: ProfileIcon,
+        text: 'profile',
+        authOnly: true,
+      },
+      {
+        path: getRouteArticles(),
+        Icon: ArticlesIcon,
+        text: 'articles',
+        authOnly: true,
+      },
+    );
+  }
+  return sidebarItemList;
+});

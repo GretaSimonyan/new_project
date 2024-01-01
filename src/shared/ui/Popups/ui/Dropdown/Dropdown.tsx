@@ -1,7 +1,4 @@
-import {
-  Fragment,
-  ReactNode,
-} from 'react';
+import { Fragment, ReactNode } from 'react';
 import { Menu } from '@headlessui/react';
 
 import { classNames } from '@/shared/lib/classNames/classNames';
@@ -34,13 +31,11 @@ export function Dropdown(props: DropdownProps) {
 
   return (
     <Menu as="div" className={classNames('', {}, [className, popupCls.popup])}>
-      <Menu.Button className={popupCls.trigger}>
-        {trigger}
-      </Menu.Button>
+      <Menu.Button className={popupCls.trigger}>{trigger}</Menu.Button>
       <Menu.Items className={classNames(cls.menu, {}, menuClasses)}>
         {items.map((item, index) => {
           /* eslint-disable react/no-array-index-key */
-          const content = ({ active }: {active: boolean}) => (
+          const content = ({ active }: { active: boolean }) => (
             <button
               type="button"
               key={`dropdown-key-${index}`}

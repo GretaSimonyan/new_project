@@ -1,18 +1,12 @@
-import {
-  bindActionCreators,
-  createSlice,
-} from '@reduxjs/toolkit';
-import {
-  SliceCaseReducers,
-  CreateSliceOptions,
-} from '@reduxjs/toolkit/dist';
+import { bindActionCreators, createSlice } from '@reduxjs/toolkit';
+import { SliceCaseReducers, CreateSliceOptions } from '@reduxjs/toolkit/dist';
 import { useDispatch } from 'react-redux';
 import { useMemo } from 'react';
 
 export function buildSlice<
   State,
   CaseReducers extends SliceCaseReducers<State>,
-  Name extends string = string
+  Name extends string = string,
 >(options: CreateSliceOptions<State, CaseReducers, Name>) {
   const slice = createSlice(options);
 
@@ -20,7 +14,10 @@ export function buildSlice<
     const dispatch = useDispatch();
 
     // @ts-ignore
-    return useMemo(() => bindActionCreators(slice.actions, dispatch), [dispatch]);
+    return useMemo(
+      () => bindActionCreators(slice.actions, dispatch),
+      [dispatch],
+    );
   };
 
   return {

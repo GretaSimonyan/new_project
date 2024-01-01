@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-  ComponentStory, ComponentMeta,
-} from '@storybook/react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
 import withMock from 'storybook-addon-mock';
 
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
@@ -20,7 +18,9 @@ export default {
   decorators: [withMock],
 } as ComponentMeta<typeof ArticleRecommendationsList>;
 
-const Template: ComponentStory<typeof ArticleRecommendationsList> = (args) => <ArticleRecommendationsList {...args} />;
+const Template: ComponentStory<typeof ArticleRecommendationsList> = (args) => (
+  <ArticleRecommendationsList {...args} />
+);
 
 const article: Article = {
   id: '1',
@@ -28,7 +28,8 @@ const article: Article = {
   createdAt: '',
   views: 123,
   user: {
-    id: '1', username: '123',
+    id: '1',
+    username: '123',
   },
   blocks: [],
   type: [],
@@ -46,13 +47,16 @@ Normal.parameters = {
       status: 200,
       response: [
         {
-          ...article, id: '1',
+          ...article,
+          id: '1',
         },
         {
-          ...article, id: '2',
+          ...article,
+          id: '2',
         },
         {
-          ...article, id: '3',
+          ...article,
+          id: '3',
         },
       ],
     },

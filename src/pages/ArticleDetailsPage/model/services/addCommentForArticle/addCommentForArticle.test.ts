@@ -12,9 +12,11 @@ describe('addCommentForArticle.test', () => {
   };
   test('success', async () => {
     const thunk = new TestAsyncThunk(addCommentForArticle);
-    thunk.api.post.mockReturnValue(Promise.resolve({
-      data: commentData,
-    }));
+    thunk.api.post.mockReturnValue(
+      Promise.resolve({
+        data: commentData,
+      }),
+    );
     // const result = await thunk.callThunk(commentText);
 
     // expect(thunk.dispatch).toHaveBeenCalledWith(fetchCommentsByArticleId(commentData.articleId));
